@@ -64,6 +64,10 @@ const useStyles = createUseStyles(theme => ({
             transform: 'translateY(-1px)',
             filter: 'brightness(0.95)',
             boxShadow: '0 7px 14px rgb(50 50 93 / 10%), 0 3px 6px rgb(0 0 0 / 8%)'
+        },
+
+        '&:active': {
+            transform: 'translate3d(0, -10%, 0)'
         }
     }
 }))
