@@ -3,7 +3,7 @@ import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles(theme => ({ 
     root: {
-        position: 'fixed',
+        position: 'relative',
         width: '100%',
         height: '60px',
         bottom: 0,
@@ -18,7 +18,7 @@ const Footer = () => {
 
     return (
         <div className={classes.root}>
-            Copyright &copy; 2022 SAU MRKT
+            Copyright &copy; 2022 Illuminate @ Enactus
         </div>
     )
 }
