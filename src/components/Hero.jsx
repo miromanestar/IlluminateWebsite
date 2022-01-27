@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { createUseStyles } from 'react-jss'
+import clsx from 'clsx'
 
 import HeroImg from '../assets/hero.jpg'
 
@@ -20,6 +21,7 @@ const useStyles = createUseStyles(theme => ({
         objectFit: 'cover',
         filter: 'brightness(0.5)',
         position: 'absolute',
+        transition: '0.01s transform',
     },
 
     container: {
@@ -28,15 +30,45 @@ const useStyles = createUseStyles(theme => ({
 
     enactus: {
         height: '5rem',
+    },
+
+    disableParallax: {
+        [theme.breakpoints.down('md')]: { 
+            transform: 'none !important' 
+        }
     }
 }))
 
-const Hero = () => {
+const Hero = ({ parallax, ratio, mobile }) => {
     const classes = useStyles()
+    const [offset, setOffset] = useState(0)
+
+    useEffect(() => {
+        
+        if (!parallax)
+            return
+
+        const handleScroll = () => {
+            setOffset(window.pageYOffset)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [offset])
 
     return (
         <div className={classes.root}>
-            <img src={HeroImg} className={classes.img} alt="Illuminate Team" />
+            <img
+                src={HeroImg} 
+                className={mobile ? classes.img : clsx(classes.img, classes.disableParallax)}
+                alt="Illuminate Team" 
+                style={{
+                    transform: `translateY(${offset * (ratio || 0.5)}px)`,
+                }}
+            />
 
             <div className={classes.container}>
                 <h1>Illuminate Marketing</h1>

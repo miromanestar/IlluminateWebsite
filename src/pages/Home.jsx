@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { createUseStyles } from 'react-jss'
 import {
     Container,
     Grid,
-    Typography
+    Typography,
+    Grow
 } from '@mui/material'
 import Hero from '../components/Hero'
 import Youtube from '../components/Youtube'
@@ -22,19 +23,27 @@ const useStyles = createUseStyles(theme => ({
         position: 'relative',
         backgroundColor: 'white',
         minHeight: '20vh',
-        width: '96%',
+        width: '98%',
         boxShadow: 'rgb(0 0 0 / 5%) 0rem 1.25rem 1.6875rem 0rem',
         margin: '0 auto',
         marginTop: '-60px',
         borderRadius: '0.75rem',
-        padding: '20px 0'
+        padding: '20px 0',
+
+        [theme.breakpoints.down('md')]: {
+            width: '92%',
+        }
     },
 
     section1: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: '90px 16px'
+        padding: '90px 16px',
+
+        [theme.breakpoints.down('md')]: {
+            padding: '45px 16px',
+        }
     },
 
     info: {
@@ -49,7 +58,7 @@ const useStyles = createUseStyles(theme => ({
         position: 'relative',
         maxWidth: '600px',
         borderRadius: '0.75rem',
-        boxShadow: 'rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem, rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem'
+        boxShadow: theme.boxShadows.light
     },
 
     videoContainer: {
@@ -58,7 +67,8 @@ const useStyles = createUseStyles(theme => ({
         marginLeft: '24px',
         marginRight: '24px',
         borderRadius: '0.75rem',
-        boxShadow: 'rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem, rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem'
+        boxShadow: theme.boxShadows.light,
+        overflow: 'hidden'
     },
 
     videoText: {
@@ -77,7 +87,11 @@ const App = () => {
 
     return (
         <div className={classes.root}>
-            <Hero />
+            <Hero 
+                parallax 
+                ratio={0.2}
+                mobile={false}
+            />
 
             <div className={classes.container}>
                 <section className={classes.section1}>
@@ -91,34 +105,45 @@ const App = () => {
                             <Grid 
                                 container item
                                 className={classes.info}
-                                columns={{ xs: 1, sm: 2 }}
+                                columns={{ xs: 1, md: 2 }}
                                 xs={1} md={1}
                                 spacing={4}
                             >
                                 {
                                     infoData.map((item, index) =>
-                                        <Grid item xs={1} sm={1} key={`info_${index}`}>
-                                                {item.icon}
-                                                <Typography variant="h6">{item.title}</Typography>
-                                                <Typography variant="subtitle1">{item.desc}</Typography>
+                                    <Grow
+                                        in={true}
+                                        timeout={(index + 1) * 400}
+                                        key={`info_${index}`}
+                                    >
+                                        <Grid item xs={1} md={1}>
+                                            {item.icon}
+                                            <Typography variant="h6">{item.title}</Typography>
+                                            <Typography variant="subtitle1">{item.desc}</Typography>
                                         </Grid>
+                                    </Grow>
                                     )    
                                 }
                             </Grid>
                             <Grid container item
                                 xs={1} md={1}
                             >
-                                <div className={classes.cardContainer}>
-                                    <div className={classes.videoContainer}>
-                                        <Youtube videoId={videoId} style={{ 
-                                            borderRadius: '0.75rem' 
-                                        }}/>
+                                <Grow
+                                    in={true}
+                                    timeout={800}
+                                >
+                                    <div className={classes.cardContainer}>
+                                        <div className={classes.videoContainer}>
+                                            <Youtube videoId={videoId} style={{ 
+                                                borderRadius: '0.75rem' 
+                                            }}/>
+                                        </div>
+                                        <Typography variant="subtitle1" className={classes.videoText}>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                                            incididunt ut labore et dolore magna aliqua. Sed tempus urna et pharetra.
+                                        </Typography>
                                     </div>
-                                    <Typography variant="subtitle1" className={classes.videoText}>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                                        incididunt ut labore et dolore magna aliqua. Sed tempus urna et pharetra.
-                                    </Typography>
-                                </div>
+                                </Grow>
                             </Grid>
                         </Grid>
                     </Container>
@@ -132,9 +157,15 @@ const App = () => {
                         >
                             {
                                 peopleData.map((item, index) => (
-                                    <Grid item xs={1} md={1} key={`people_${index}`}>
-                                        <PersonCard person={item} />
-                                    </Grid>
+                                    <Grow
+                                        in={true}
+                                        timeout={(index + 1) * 400}
+                                        key={`people_${index}`}
+                                    >
+                                        <Grid item xs={1} md={1}>
+                                            <PersonCard person={item} />
+                                        </Grid>
+                                    </Grow>
                                 ))
                             }
                         </Grid>

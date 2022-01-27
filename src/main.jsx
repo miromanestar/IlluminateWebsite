@@ -19,6 +19,10 @@ const theme = createTheme({
         mutedWhite: '#F0F2F5',
         mutedText: '#7B809A',
         darkGradient: 'linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))'
+    },
+
+    boxShadows: {
+        light: 'rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem, rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem'
     }
 })
 

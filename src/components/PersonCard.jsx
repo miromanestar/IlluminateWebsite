@@ -10,7 +10,7 @@ import {
 const useStyles = createUseStyles(theme => ({ 
     root: {
         borderRadius: '0.75rem !important',
-        width: 'fit-content',
+        boxShadow: theme.boxShadows.light
     },
 
     img: {
@@ -25,6 +25,7 @@ const useStyles = createUseStyles(theme => ({
             borderRadius: '0.75rem',
             width: '100%',
             height: '100%',
+            boxShadow: theme.boxShadows.light,
         }
     },
 

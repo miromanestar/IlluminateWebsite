@@ -1,6 +1,7 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { createUseStyles } from 'react-jss';
+import clsx from 'clsx';
 import {
     Box,
     Toolbar,
@@ -8,6 +9,7 @@ import {
     Typography,
     Menu
 } from '@mui/material'
+import { debounce } from '../tools/debounce'
 
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
@@ -19,7 +21,24 @@ import LogoImg from '../assets/logo.png'
 const useStyles = createUseStyles((theme) => ({
     root: {
         position: 'sticky',
+        top: 20,
         zIndex: 999,
+        transition: 'top 0.6s ease-in-out',
+    },
+
+    hide: {
+        top: -100
+    },
+
+    blur: {
+        backdropFilter: 'blur(4px)',
+        backgroundColor: 'rgba(0, 0, 0, 0.6) !important',
+        borderRadius: '0.75rem',
+        boxShadow: theme.boxShadows.light,
+
+        [theme.breakpoints.down('md')]: {
+            width: '90% !important'
+        }
     },
 
     toolbar: {
@@ -27,7 +46,10 @@ const useStyles = createUseStyles((theme) => ({
     },
 
     menu: {
-        borderRadius: '10px !important'
+        borderRadius: '10px !important',
+        backdropFilter: 'blur(4px)',
+        backgroundColor: 'rgba(0, 0, 0, 0.6) !important',
+        transform: 'translateY(15px) !important'
     },
 
     logo: {
@@ -57,7 +79,7 @@ const useStyles = createUseStyles((theme) => ({
         '&:hover': {
             backgroundColor: 'rgba(255, 255, 255, 0.2)',
             transform: 'scale(0.95)',
-            boxShadow: '0 7px 14px rgb(50 50 93 / 10%), 0 3px 6px rgb(0 0 0 / 8%)',
+            boxShadow: theme.boxShadows.light,
         },
     },
 
@@ -71,10 +93,10 @@ const useStyles = createUseStyles((theme) => ({
         color: 'white !important',
         transition: 'transform .2s, filter .2s, box-shadow .2s !important',
 
-        '&:hover': { 
+        '&:hover': {
             transform: 'translateY(-1px)',
             filter: 'brightness(0.95)',
-            boxShadow: '0 7px 14px rgb(50 50 93 / 10%), 0 3px 6px rgb(0 0 0 / 8%)'
+            boxShadow: theme.boxShadows.light
         },
 
         '&:active': {
@@ -104,38 +126,45 @@ const pages = [
         name: 'Donate',
         route: '/donate'
     }
-];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+]
 
 const ResponsiveNavbar = () => {
     const classes = useStyles()
     const navigate = useNavigate()
 
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
+    const [anchorElNav, setAnchorElNav] = React.useState(null)
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(true)
 
     const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
+        setAnchorElNav(event.currentTarget)
+    }
 
     const handleCloseNavMenu = (route) => {
         navigate(route)
-        setAnchorElNav(null);
-    };
+        setAnchorElNav(null)
+    }
 
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
+    const handleScroll = debounce(() => {
+        const currentScrollPos = window.pageYOffset;
+
+        setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10);
+        setPrevScrollPos(currentScrollPos);
+    }, 100)
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+
+        return () => window.removeEventListener('scroll', handleScroll)
+
+    }, [prevScrollPos, visible, handleScroll])
 
     return (
         <div className={classes.root}>
-            <Container maxWidth="xl">
+            <Container className={classes.blur} maxWidth="xl">
                 <Toolbar className={classes.toolbar} disableGutters>
-                    <Link 
-                        className={classes.logo} 
+                    <Link
+                        className={classes.logo}
                         style={{ display: { xs: 'none', md: 'flex' } }}
                         to="/"
                     >
@@ -179,6 +208,7 @@ const ResponsiveNavbar = () => {
                             sx={{
                                 display: { xs: 'block', md: 'none' }
                             }}
+                            PaperProps={{ className: classes.menu }}
                         >
                             {pages.map((page) => (
                                 <MenuItem key={page.name} className={classes.button} sx={{ margin: '10px 10px !important', justifyContent: 'center' }} onClick={() => handleCloseNavMenu(page.route)}>

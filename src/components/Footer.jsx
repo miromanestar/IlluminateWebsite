@@ -3,10 +3,10 @@ import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles(theme => ({ 
     root: {
-        position: 'relative',
+        position: 'sticky',
+        top: '100%',
         width: '100%',
         height: '60px',
-        bottom: 0,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
