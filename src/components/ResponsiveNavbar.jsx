@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { createUseStyles } from 'react-jss';
-import clsx from 'clsx';
 import {
     Box,
     Toolbar,
@@ -32,10 +31,10 @@ const useStyles = createUseStyles((theme) => ({
     },
 
     blur: {
-        backdropFilter: 'blur(4px)',
-        backgroundColor: 'rgba(0, 0, 0, 0.6) !important',
+        backdropFilter: 'blur(20px)',
+        backgroundColor: 'rgba(0, 0, 0, 0.2) !important',
         borderRadius: '0.75rem',
-        boxShadow: theme.boxShadows.light,
+        boxShadow: theme.shadows[4],
         width: '90% !important'
     },
 
@@ -45,8 +44,8 @@ const useStyles = createUseStyles((theme) => ({
 
     menu: {
         borderRadius: '10px !important',
-        backdropFilter: 'blur(4px)',
-        backgroundColor: 'rgba(0, 0, 0, 0.6) !important',
+        backdropFilter: 'blur(20px)',
+        backgroundColor: 'rgba(0, 0, 0, 0.2) !important',
         transform: 'translateY(15px) !important'
     },
 
@@ -75,9 +74,7 @@ const useStyles = createUseStyles((theme) => ({
         },
 
         '&:hover': {
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
-            transform: 'scale(0.95)',
-            boxShadow: theme.boxShadows.light,
+            transform: 'scale(1.04)',
         },
     },
 

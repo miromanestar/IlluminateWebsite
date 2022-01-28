@@ -14,6 +14,8 @@ const useStyles = createUseStyles(theme => ({
             left: 0,
             width: '100%',
             height: '100%',
+            overflow: 'hidden',
+            borderRadius: '0.75rem !important',
         }
     }
 }))

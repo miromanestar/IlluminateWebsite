@@ -18,7 +18,7 @@ const Footer = () => {
 
     return (
         <div className={classes.root}>
-            Copyright &copy; 2022 Illuminate @ Enactus
+            Copyright &copy; 2022 Illuminate SAU
         </div>
     )
 }

@@ -1,8 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { createUseStyles } from 'react-jss'
+import {
+    Typography,
+    Icon
+} from '@mui/material'
 import clsx from 'clsx'
 
 import HeroImg from '../assets/hero.jpg'
+
+import InstagramIcon from '@mui/icons-material/Instagram'
+import FacebookIcon from '@mui/icons-material/Facebook'
+import TwitterIcon from '@mui/icons-material/Twitter'
+import YouTubeIcon from '@mui/icons-material/YouTube'
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const useStyles = createUseStyles(theme => ({
     root: {
@@ -19,22 +29,52 @@ const useStyles = createUseStyles(theme => ({
         width: '100%',
         height: '75vh',
         objectFit: 'cover',
-        filter: 'brightness(0.5)',
+        filter: 'brightness(0.6)',
         position: 'absolute',
         transition: '0.01s transform',
     },
 
     container: {
-        zIndex: 4
+        zIndex: 4,
+        textAlign: 'center',
     },
 
-    enactus: {
-        height: '5rem',
+    title: {
+        fontWeight: 700,
+
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '2.5rem !important',
+        }
+
+    },
+
+    overline: {
+        fontSize: '1.5rem',
+    },
+
+    subtitle: {
+        color: theme.colors.mutedText2,
+        paddingTop: '12px',
+
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '1rem !important',
+        }
+    },
+
+    findUs: {
+        marginTop: '20px !important',
+        marginBottom: '10px !important'
+    },
+
+    social: {
+        '& svg': {
+            marginRight: '10px'
+        }
     },
 
     disableParallax: {
-        [theme.breakpoints.down('md')]: { 
-            transform: 'none !important' 
+        [theme.breakpoints.down('md')]: {
+            transform: 'none !important'
         }
     }
 }))
@@ -44,7 +84,7 @@ const Hero = ({ parallax, ratio, mobile }) => {
     const [offset, setOffset] = useState(0)
 
     useEffect(() => {
-        
+
         if (!parallax)
             return
 
@@ -62,17 +102,26 @@ const Hero = ({ parallax, ratio, mobile }) => {
     return (
         <div className={classes.root}>
             <img
-                src={HeroImg} 
+                src={HeroImg}
                 className={mobile ? classes.img : clsx(classes.img, classes.disableParallax)}
-                alt="Illuminate Team" 
+                alt="Illuminate Team"
                 style={{
                     transform: `translateY(${offset * (ratio || 0.5)}px)`,
                 }}
             />
 
             <div className={classes.container}>
-                <h1>Illuminate Marketing</h1>
-                <h3>PLACEHOLDER</h3>
+                <Typography variant="overline" className={classes.overline}>A SOUTHERN ADVENTIST UNIVERSITY ENACTUS PROJECT</Typography>
+                <Typography variant="h1" className={classes.title}>Illuminate Marketing</Typography>
+                <Typography variant="h6" className={classes.subtitle}>STUDENT-RUN MARKETING TEAM THAT WORKS WITH SMALL BUSINESSES TO HELP THEM GROW</Typography>
+                <Typography variant="subtitle2" className={classes.findUs}>Find us on</Typography>
+                <span className={classes.social}>
+                    <InstagramIcon />
+                    <FacebookIcon />
+                    <TwitterIcon />
+                    <YouTubeIcon />
+                    <LinkedInIcon />
+                </span>
             </div>
         </div>
     )

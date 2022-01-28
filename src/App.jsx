@@ -4,7 +4,9 @@ import { createUseStyles } from 'react-jss'
 
 import ResponsiveNavbar from './components/ResponsiveNavbar'
 import Footer from './components/Footer'
+
 import Home from './pages/Home'
+import About from './pages/About'
 import NotFound from './pages/NotFound'
 
 const useStyles = createUseStyles(theme => ({ 
@@ -22,6 +24,7 @@ const App = () => {
             <ResponsiveNavbar />
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             <Footer />

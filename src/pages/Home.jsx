@@ -4,8 +4,11 @@ import {
     Container,
     Grid,
     Typography,
-    Grow
+    useTheme,
+    useMediaQuery
 } from '@mui/material'
+import Zoom from 'react-reveal/Zoom'
+import Main from '../components/Main'
 import Hero from '../components/Hero'
 import Youtube from '../components/Youtube'
 import PublicIcon from '@mui/icons-material/Public';
@@ -20,19 +23,8 @@ const useStyles = createUseStyles(theme => ({
     },
 
     container: {
-        position: 'relative',
-        backgroundColor: 'white',
-        minHeight: '20vh',
-        width: '98%',
-        boxShadow: 'rgb(0 0 0 / 5%) 0rem 1.25rem 1.6875rem 0rem',
-        margin: '0 auto',
         marginTop: '-60px',
-        borderRadius: '0.75rem',
-        padding: '20px 0',
-
-        [theme.breakpoints.down('md')]: {
-            width: '92%',
-        }
+        padding: '20px 0'
     },
 
     section1: {
@@ -58,7 +50,7 @@ const useStyles = createUseStyles(theme => ({
         position: 'relative',
         maxWidth: '600px',
         borderRadius: '0.75rem',
-        boxShadow: theme.boxShadows.light,
+        boxShadow: theme.shadows[9],
         background: 'linear-gradient(12deg, rgb(66, 66, 74), rgb(25, 25, 25))',
         color: 'white'
     },
@@ -69,7 +61,7 @@ const useStyles = createUseStyles(theme => ({
         marginLeft: '24px',
         marginRight: '24px',
         borderRadius: '0.75rem',
-        boxShadow: theme.boxShadows.light,
+        boxShadow: theme.shadows[9],
         overflow: 'hidden'
     },
 
@@ -86,6 +78,8 @@ const useStyles = createUseStyles(theme => ({
 
 const App = () => {
     const classes = useStyles()
+    const theme = useTheme()
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'))
 
     return (
         <div className={classes.root}>
@@ -95,7 +89,7 @@ const App = () => {
                 mobile={false}
             />
 
-            <div className={classes.container}>
+            <Main className={classes.container}>
                 <section className={classes.section1}>
                     <Container>
                         <Grid 
@@ -113,27 +107,22 @@ const App = () => {
                             >
                                 {
                                     infoData.map((item, index) =>
-                                    <Grow
-                                        in={true}
-                                        timeout={(index + 1) * 400}
-                                        key={`info_${index}`}
-                                    >
-                                        <Grid item xs={1} md={1}>
-                                            {item.icon}
-                                            <Typography variant="h6">{item.title}</Typography>
-                                            <Typography variant="subtitle1">{item.desc}</Typography>
+                                        <Grid item xs={1} md={1} key={`card_${ index }`}>
+                                            <Zoom delay={!isMobile ? 150 * (index + 1) : 0}>
+                                                <div>
+                                                    {item.icon}
+                                                    <Typography variant="h6">{item.title}</Typography>
+                                                    <Typography variant="subtitle1">{item.desc}</Typography>
+                                                </div>
+                                            </Zoom>
                                         </Grid>
-                                    </Grow>
                                     )    
                                 }
                             </Grid>
                             <Grid container item
                                 xs={1} md={1}
                             >
-                                <Grow
-                                    in={true}
-                                    timeout={800}
-                                >
+                                <Zoom delay={!isMobile ? 150 * 5 : 0}>
                                     <div className={classes.cardContainer}>
                                         <div className={classes.videoContainer}>
                                             <Youtube videoId={videoId} style={{ 
@@ -145,7 +134,7 @@ const App = () => {
                                             incididunt ut labore et dolore magna aliqua. Sed tempus urna et pharetra.
                                         </Typography>
                                     </div>
-                                </Grow>
+                                </Zoom>
                             </Grid>
                         </Grid>
                     </Container>
@@ -159,21 +148,17 @@ const App = () => {
                         >
                             {
                                 peopleData.map((item, index) => (
-                                    <Grow
-                                        in={true}
-                                        timeout={(index + 1) * 400}
-                                        key={`people_${index}`}
-                                    >
-                                        <Grid item xs={1} md={1}>
+                                    <Grid item xs={1} md={1} key={`person_${ index }`}>
+                                        <Zoom delay={!isMobile ? index % 2 === 0 ? 0 : 150 : 0}>
                                             <PersonCard person={item} />
-                                        </Grid>
-                                    </Grow>
+                                        </Zoom>
+                                    </Grid>
                                 ))
                             }
                         </Grid>
                     </Container>
                 </section>
-            </div>
+            </Main>
         </div>
     )
 }
