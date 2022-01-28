@@ -7,10 +7,10 @@ import Main from '../components/Main'
 
 const useStyles = createUseStyles(theme => ({ 
     root: {
-        textAlign: 'center',
 
         '& h1': {
             color: theme.colors.primary,
+            textAlign: 'center',
 
             [theme.breakpoints.down('sm')]: {
                 fontSize: '4.5rem !important',
@@ -24,7 +24,7 @@ const useStyles = createUseStyles(theme => ({
         padding: '45px 16px',
 
         '& div': {
-            maxWidth: '800px'
+            maxWidth: '1200px'
         }
     }
 }))
@@ -42,7 +42,7 @@ const About = () => {
             </section>
             <section className={classes.mission}>
                 <div>
-                    <Typography variant="h1">Our Mission</Typography>
+                    <Typography variant="h1">Our History</Typography>
                     <Typography variant="h5">
                         <br />
                         In May 2019, Enactus at Southern Adventist University recognized a need in their local community, 

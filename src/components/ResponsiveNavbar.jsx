@@ -34,8 +34,12 @@ const useStyles = createUseStyles((theme) => ({
         backdropFilter: 'blur(20px)',
         backgroundColor: 'rgba(0, 0, 0, 0.2) !important',
         borderRadius: '0.75rem',
-        boxShadow: theme.shadows[4],
-        width: '90% !important'
+        width: '90% !important',
+        boxShadow: theme.boxShadows.light,
+
+        '@supports (-moz-appearance: none)': {
+            backgroundColor: 'rgba(0, 0, 0, 0.4) !important',
+        }
     },
 
     toolbar: {
@@ -46,7 +50,11 @@ const useStyles = createUseStyles((theme) => ({
         borderRadius: '10px !important',
         backdropFilter: 'blur(20px)',
         backgroundColor: 'rgba(0, 0, 0, 0.2) !important',
-        transform: 'translateY(15px) !important'
+        transform: 'translateY(15px) !important',
+
+        '@supports (-moz-appearance: none)': {
+            backgroundColor: 'rgba(0, 0, 0, 0.4) !important',
+        }
     },
 
     logo: {
