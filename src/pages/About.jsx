@@ -3,10 +3,15 @@ import { createUseStyles } from 'react-jss'
 import {
     Typography
 } from '@mui/material'
+import Header from '../components/Header'
 import Main from '../components/Main'
 
 const useStyles = createUseStyles(theme => ({ 
     root: {
+
+    },
+    
+    container: {
 
         '& h1': {
             color: theme.colors.primary,
@@ -33,7 +38,9 @@ const About = () => {
     const classes = useStyles()
 
     return (
-        <Main className={classes.root}>
+        <div className={classes.root}>
+        <Header />
+        <Main className={classes.container}>
             <section className={classes.mission}>
                 <div>
                     <Typography variant="h1">Our Mission</Typography>
@@ -62,6 +69,7 @@ const About = () => {
                 </div>
             </section>
         </Main>
+        </div>
     )
 }
 

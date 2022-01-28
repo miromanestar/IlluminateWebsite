@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { createUseStyles } from 'react-jss'
 import {
     Typography,
-    Icon
+    IconButton
 } from '@mui/material'
 import clsx from 'clsx'
 
@@ -68,7 +68,12 @@ const useStyles = createUseStyles(theme => ({
 
     social: {
         '& svg': {
-            marginRight: '10px'
+            color: 'white',
+            transition: '.2s transform',
+
+            '&:hover': {
+                transform: 'scale(1.2)',
+            }
         }
     },
 
@@ -116,11 +121,11 @@ const Hero = ({ parallax, ratio, mobile }) => {
                 <Typography variant="h6" className={classes.subtitle}>STUDENT-RUN MARKETING TEAM THAT WORKS WITH SMALL BUSINESSES TO HELP THEM GROW</Typography>
                 <Typography variant="subtitle2" className={classes.findUs}>Find us on</Typography>
                 <span className={classes.social}>
-                    <InstagramIcon />
-                    <FacebookIcon />
-                    <TwitterIcon />
-                    <YouTubeIcon />
-                    <LinkedInIcon />
+                    <IconButton href="https://instagram.com"><InstagramIcon /></IconButton>
+                    <IconButton href="https://facebook.com"><FacebookIcon /></IconButton>
+                    <IconButton href="https://twitter.com"><TwitterIcon /></IconButton>
+                    <IconButton href="https://youtube.com"><YouTubeIcon /></IconButton>
+                    <IconButton href="https://linkedin.com"><LinkedInIcon /></IconButton>
                 </span>
             </div>
         </div>
