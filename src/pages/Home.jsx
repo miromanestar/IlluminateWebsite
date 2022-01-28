@@ -58,7 +58,9 @@ const useStyles = createUseStyles(theme => ({
         position: 'relative',
         maxWidth: '600px',
         borderRadius: '0.75rem',
-        boxShadow: theme.boxShadows.light
+        boxShadow: theme.boxShadows.light,
+        background: 'linear-gradient(12deg, rgb(66, 66, 74), rgb(25, 25, 25))',
+        color: 'white'
     },
 
     videoContainer: {
