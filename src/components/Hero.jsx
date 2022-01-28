@@ -8,11 +8,11 @@ const useStyles = createUseStyles(theme => ({
     root: {
         width: '100%',
         height: '75vh',
-        marginTop: '-100px',
+        marginTop: '-150px',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        color: 'white'
+        color: 'white',
     },
 
     img: {

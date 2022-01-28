@@ -24,6 +24,7 @@ const useStyles = createUseStyles((theme) => ({
         top: 20,
         zIndex: 999,
         transition: 'top 0.6s ease-in-out',
+        marginBottom: '50px'
     },
 
     hide: {
@@ -35,10 +36,7 @@ const useStyles = createUseStyles((theme) => ({
         backgroundColor: 'rgba(0, 0, 0, 0.6) !important',
         borderRadius: '0.75rem',
         boxShadow: theme.boxShadows.light,
-
-        [theme.breakpoints.down('md')]: {
-            width: '90% !important'
-        }
+        width: '90% !important'
     },
 
     toolbar: {
