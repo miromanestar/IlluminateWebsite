@@ -28,15 +28,10 @@ const theme = createTheme({
     },
 
     //MUI overrides
-    components: {
-        MuiInput: {
-            styleOverrides: {
-                root: {
-                    '&:after': {
-                        borderBottomColor: '#F8B936 !important'
-                    }
-                }
-            }
+    palette: {
+        primary: {
+            main: '#F8B936',
+            contrastText: '#fff'
         }
     }
 })

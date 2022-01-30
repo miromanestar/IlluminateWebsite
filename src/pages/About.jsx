@@ -12,10 +12,6 @@ const useStyles = createUseStyles(theme => ({
         '& h3': {
             color: theme.colors.primary,
             textAlign: 'center',
-
-            [theme.breakpoints.down('sm')]: {
-                fontSize: '4.5rem !important',
-            }
         }
     },
 
@@ -25,7 +21,7 @@ const useStyles = createUseStyles(theme => ({
         padding: '45px 16px',
 
         '& div': {
-            maxWidth: '1200px'
+            maxWidth: '75ch',
         }
     }
 }))
@@ -46,7 +42,7 @@ const About = () => {
             <section className={classes.mission}>
                 <div>
                     <Typography variant="h3">Our History</Typography>
-                    <Typography variant="h5">
+                    <Typography variant="h5" sx={{ textAlign: 'justify' }}>
                         <br />
                         In May 2019, Enactus at Southern Adventist University recognized a need in their local community, 
                         and decided to address the need properly. The Collegedale-Chattanooga area was suffering from a devastating 
