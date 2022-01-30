@@ -7,8 +7,7 @@ import HeaderImg from '../assets/nature-header.jpg'
 
 const useStyles = createUseStyles(theme => ({
     root: {
-        marginBottom: '150px',
-        display: 'flex',
+        marginBottom: '200px',
     },
 
     img: {
