@@ -25,6 +25,19 @@ const theme = createTheme({
     boxShadows: {
         light: 'rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem, rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem',
         feather: 'rgb(0 0 0 / 5%) 0rem 1.25rem 1.6875rem 0rem'
+    },
+
+    //MUI overrides
+    components: {
+        MuiInput: {
+            styleOverrides: {
+                root: {
+                    '&:after': {
+                        borderBottomColor: '#F8B936 !important'
+                    }
+                }
+            }
+        }
     }
 })
 

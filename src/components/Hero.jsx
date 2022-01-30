@@ -29,6 +29,7 @@ const useStyles = createUseStyles(theme => ({
         width: '100%',
         height: '75vh',
         objectFit: 'cover',
+        objectPosition: '50% 20%',
         filter: 'brightness(0.6)',
         position: 'absolute',
         transition: '0.01s transform',

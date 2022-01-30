@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { createUseStyles } from 'react-jss'
+import { Typography } from '@mui/material'
+import clsx from 'clsx'
 
 import HeaderImg from '../assets/nature-header.jpg'
 
 const useStyles = createUseStyles(theme => ({
     root: {
-        marginBottom: '200px',
+        marginBottom: '150px',
+        display: 'flex',
     },
 
     img: {
@@ -17,9 +20,22 @@ const useStyles = createUseStyles(theme => ({
         top: '0',
         transition: '0.01s transform',
     },
+
+    title: {
+        position: 'absolute',
+        zIndex: 100,
+        color: 'white',
+        top: '200px',
+        width: '100%',
+        textAlign: 'center',
+
+        [theme.breakpoints.down('sm')]: {
+            top: '175px',
+        }
+    }
 }))
 
-const Header = () => {
+const Header = ({ title, titleClassName }) => {
     const classes = useStyles()
 
     return (
@@ -29,6 +45,7 @@ const Header = () => {
                 className={classes.img}
                 alt="Illuminate Header"
             />
+            <Typography className={clsx(titleClassName, classes.title)} variant="h2">{ title }</Typography>
         </div>
     )
 }

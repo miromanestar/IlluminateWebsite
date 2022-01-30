@@ -24,7 +24,6 @@ const useStyles = createUseStyles(theme => ({
 
     container: {
         marginTop: '-60px',
-        padding: '20px 0'
     },
 
     section1: {
@@ -73,6 +72,8 @@ const useStyles = createUseStyles(theme => ({
     section2: {
         background: theme.colors.darkGradient,
         padding: '90px 16px',
+        borderBottomLeftRadius: '0.75rem',
+        borderBottomRightRadius: '0.75rem',
     }
 }))
 
@@ -202,10 +203,10 @@ const peopleData = [
         photo: 'https://media-exp1.licdn.com/dms/image/C4E03AQF6Ujdxf25WVQ/profile-displayphoto-shrink_800_800/0/1638888697683?e=1648684800&v=beta&t=RT-R3eWuEXMt1pjy5WZzAX68yjYy8ZXBNUgahDHOM-k'
     },
     {
-        name: 'John Doe',
-        title: 'VIP',
+        name: 'Kareena Hansen',
+        title: 'Human Resources',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        photo: 'https://i.pravatar.cc/300'
+        photo: 'https://media-exp1.licdn.com/dms/image/C4E03AQF1ylVQSMwjfQ/profile-displayphoto-shrink_800_800/0/1635083945911?e=1648684800&v=beta&t=PTTeWkASdKbLlRt4mGm9fiLUZtB-N_YIUCggNsHKe_Q'
     },
     {
         name: 'John Doe',

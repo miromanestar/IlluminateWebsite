@@ -11,14 +11,13 @@ const AnimatedRoutes = ({ children }) => {
         enter: { opacity: 1, display: '' },
         leave: { opacity: 0 },
         expires: 110,
-        trail: 300,
+        trail: 350,
         config: {
             duration: 200
         },
         order: ['leave', 'enter', 'update']
     })
-    console.log(location)
-    console.log(keyRef.current, location.pathname)
+
     if (keyRef.current !== location.pathname) {
         keyRef.current = location.pathname
 

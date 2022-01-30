@@ -7,13 +7,9 @@ import Header from '../components/Header'
 import Main from '../components/Main'
 
 const useStyles = createUseStyles(theme => ({ 
-    root: {
-
-    },
-    
     container: {
 
-        '& h1': {
+        '& h3': {
             color: theme.colors.primary,
             textAlign: 'center',
 
@@ -39,17 +35,17 @@ const About = () => {
 
     return (
         <div className={classes.root}>
-        <Header />
+        <Header title={'About'} />
         <Main className={classes.container}>
             <section className={classes.mission}>
                 <div>
-                    <Typography variant="h1">Our Mission</Typography>
-                    <Typography variant="h5">Assisting low-revenue organizations by creating and enhancing their digital footprint and offering the fresh perspective of collegiate and professional minds.</Typography>
+                    <Typography variant="h3">Our Mission</Typography>
+                    <Typography variant="h5" sx={{ textAlign: 'center' }}>Assisting low-revenue organizations by creating and enhancing their digital footprint and offering the fresh perspective of collegiate and professional minds.</Typography>
                 </div>
             </section>
             <section className={classes.mission}>
                 <div>
-                    <Typography variant="h1">Our History</Typography>
+                    <Typography variant="h3">Our History</Typography>
                     <Typography variant="h5">
                         <br />
                         In May 2019, Enactus at Southern Adventist University recognized a need in their local community, 
