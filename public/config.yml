@@ -1,0 +1,35 @@
+backend:
+  name: github
+  branch: master
+  repo: miromanestar/IlluminateWebsite
+
+publish_mode: editorial_workflow
+media_folder: "images/uploads"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "pages"
+    label: "Page"
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - file: "content/pages/home.md"
+        label: "Home"
+        name: "contact-page"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Featured Image, name: featuredImage, widget: image}
+          - {label: Subtitle, name: subtitle, widget: markdown}
+          - {label: Body, name: body, widget: markdown}
+          - {label: Address, name: address, widget: text}
+          - {label: Phone, name: phone, widget: string}
+          - {label: Email Address, name: email, widget: string}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}

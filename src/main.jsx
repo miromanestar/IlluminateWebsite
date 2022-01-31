@@ -11,7 +11,6 @@ import {
 import './index.css'
 import App from './App'
 
-
 // THEME INSPIRATION https://demos.creative-tim.com/material-kit-react/#/pages/landing-pages/about-us
 const theme = createTheme({
     colors: {
