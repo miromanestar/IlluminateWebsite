@@ -14,7 +14,7 @@ import App from './App'
 // THEME INSPIRATION https://demos.creative-tim.com/material-kit-react/#/pages/landing-pages/about-us
 const theme = createTheme({
     colors: {
-        primary: '#F8B936',
+        primary: '#dd9a08',
         mutedWhite: '#F0F2F5',
         mutedText: '#7B809A',
         mutedText2: '#E0E1E3',

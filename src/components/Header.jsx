@@ -3,7 +3,7 @@ import { createUseStyles } from 'react-jss'
 import { Typography } from '@mui/material'
 import clsx from 'clsx'
 
-import HeaderImg from '../assets/nature-header.jpg'
+import HeaderImg from '../assets/light-header.jpg'
 
 const useStyles = createUseStyles(theme => ({
     root: {
@@ -14,6 +14,7 @@ const useStyles = createUseStyles(theme => ({
         width: '100%',
         height: '350px',
         objectFit: 'cover',
+        objectPosition: '15% 30%',
         filter: 'brightness(0.6)',
         position: 'absolute',
         top: '0',

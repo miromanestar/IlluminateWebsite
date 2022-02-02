@@ -118,16 +118,16 @@ const pages = [
         route: '/about'
     },
     {
-        name: 'Pricing',
-        route: '/pricing'
+        name: 'What We Offer',
+        route: '/offer'
     },
     {
         name: 'Contact',
         route: '/contact'
     },
     {
-        name: 'Donate',
-        route: '/donate'
+        name: 'Enactus',
+        route: '/enactus'
     }
 ]
 
