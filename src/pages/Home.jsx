@@ -17,6 +17,9 @@ import CorporateFareIcon from '@mui/icons-material/CorporateFare';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import PersonCard from '../components/PersonCard'
 
+import GabriellaImg from '../assets/gabriella.jpg'
+import KareenaImg from '../assets/kareena.jpg'
+
 const useStyles = createUseStyles(theme => ({ 
     root: {
         backgroundColor: theme.colors.mutedWhite,
@@ -51,7 +54,7 @@ const useStyles = createUseStyles(theme => ({
         borderRadius: '0.75rem',
         boxShadow: theme.shadows[9],
         background: 'linear-gradient(12deg, rgb(66, 66, 74), rgb(25, 25, 25))',
-        color: 'white'
+        color: 'white',
     },
 
     videoContainer: {
@@ -67,6 +70,12 @@ const useStyles = createUseStyles(theme => ({
     videoText: {
         padding: '24px',
         textAlign: 'center'
+    },
+
+    personZoom: {
+        '& .react-reveal': {
+            height: '100%'
+        }
     },
 
     section2: {
@@ -149,7 +158,7 @@ const App = () => {
                         >
                             {
                                 peopleData.map((item, index) => (
-                                    <Grid item xs={1} md={1} key={`person_${ index }`}>
+                                    <Grid className={classes.personZoom} item xs={1} md={1} key={`person_${ index }`}>
                                         <Zoom delay={!isMobile ? index % 2 === 0 ? 0 : 150 : 0}>
                                             <PersonCard person={item} />
                                         </Zoom>
@@ -193,26 +202,38 @@ const peopleData = [
     {
         name: 'Roman Johnson',
         title: 'Project Manager',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        desc: 'We at Illuminate present unparalled an unparalleled opportunity for students to learn and grow.',
         photo: 'https://media-exp1.licdn.com/dms/image/C5603AQHC-a_xla9IQA/profile-displayphoto-shrink_800_800/0/1636062296861?e=1648684800&v=beta&t=VkRY_CCjFC2_QITTAx5agdXJ-xhOBLT8kTrehXura8M'
     },
     {
         name: 'Mason Harmon',
         title: 'Project Manager',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        desc: 'Illuminate provides the opportunity to make a difference in the local community and facilitates a positive change.',
         photo: 'https://media-exp1.licdn.com/dms/image/C4E03AQF6Ujdxf25WVQ/profile-displayphoto-shrink_800_800/0/1638888697683?e=1648684800&v=beta&t=RT-R3eWuEXMt1pjy5WZzAX68yjYy8ZXBNUgahDHOM-k'
     },
     {
         name: 'Kareena Hansen',
-        title: 'Human Resources',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        photo: 'https://media-exp1.licdn.com/dms/image/C4E03AQF1ylVQSMwjfQ/profile-displayphoto-shrink_800_800/0/1635083945911?e=1648684800&v=beta&t=PTTeWkASdKbLlRt4mGm9fiLUZtB-N_YIUCggNsHKe_Q'
+        title: 'Client Relations',
+        desc: 'Enactus synergizes the strengths of students and the resources of local businesses to positively impact their local community.',
+        photo: `${KareenaImg}`
     },
     {
-        name: 'John Doe',
-        title: 'VIP',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        photo: 'https://i.pravatar.cc/300'
+        name: 'Esther Manu',
+        title: 'Client Services',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        photo: 'https://media-exp1.licdn.com/dms/image/C4D03AQFgUustatmVhQ/profile-displayphoto-shrink_800_800/0/1575213214388?e=1649894400&v=beta&t=0v-lLZXTwGYYYoHYSUOmY3zYMeZ2WFJC0J83hh4SgXc'
+    },
+    {
+        name: 'Jomari Villoso',
+        title: 'Event Coordinator',
+        desc: 'Throwin\' a party.',
+        photo: 'https://media-exp1.licdn.com/dms/image/C4E03AQH0F23IalWgBQ/profile-displayphoto-shrink_800_800/0/1634828075744?e=1649894400&v=beta&t=KHuwmgoWaikEmjsEv6aHUaRAo9qA-V--acFfKH3rXHc'
+    },
+    {
+        name: 'Gabriella Grundy',
+        title: 'Social Media',
+        desc: 'The media team at Illuminate is dedicated to bringing our clients vision to life through social media & graphic design.',
+        photo: `${GabriellaImg}`
     }
 ]
 

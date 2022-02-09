@@ -12,6 +12,7 @@ const useStyles = createUseStyles(theme => ({
         borderRadius: '0.75rem !important',
         boxShadow: theme.shadows[9],
         transition: '0.2s ease-in-out !important',
+        height: '100%',
 
         '&:hover': {
             transform: 'translateX(-15px) scale(1.05)',
@@ -49,7 +50,7 @@ const useStyles = createUseStyles(theme => ({
     },
 
     description: {
-        color: theme.colors.mutedText
+        color: theme.colors.mutedText,
     },
 }))
 
