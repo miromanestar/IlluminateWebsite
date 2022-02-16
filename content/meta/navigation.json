@@ -3,19 +3,19 @@
     "links": [
         {
             "name": "Home",
-            "route": "/"
+            "url": "/"
         },
         {
             "name": "About",
-            "route": "/about"
+            "url": "/about"
         },
         {
             "name": "What We Offer",
-            "route": "/offer"
+            "url": "/offer"
         },
         {
             "name": "Contact",
-            "route": "/contact"
+            "url": "/contact"
         }
     ]
 }
