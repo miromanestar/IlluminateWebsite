@@ -23,6 +23,7 @@ collections:
           - { label:  Bottom Subtitle, name: bottom_subtitle, widget: string }
           - { label:  Title, name: title, widget: string }
           - { label:  Hero Image, name: hero_image, widget: image }
+          - { label:  Show Social Media, name: show_social, default: true, widget: boolean }
           - label: "Features"
             name: "features"
             widget: "list"
@@ -45,13 +46,6 @@ collections:
               - { label:  Title, name: title, widget: string }
               - { label:  Description, name: description, widget: string }
               - { label:  Image, name: image, widget: image }
-          - label: "Social Media"
-            name: "social_media"
-            widget: "list"
-            fields:
-              - { label:  Name, name: name, widget: string }
-              - { label:  URL, name: url, widget: string }
-              - { label:  Icon, name: icon, widget: string, hint: "[Click here to view available icons](https://marella.me/material-design-icons/demo/font/)"  }
       - file: "content/pages/about.json"
         label: "About"
         name: "about-page"

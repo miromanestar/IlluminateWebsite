@@ -12,7 +12,7 @@ import TwitterIcon from '@mui/icons-material/Twitter'
 import YouTubeIcon from '@mui/icons-material/YouTube'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
-import { title, top_subtitle, bottom_subtitle, hero_image } from '../../content/pages/home.json'
+import { title, top_subtitle, bottom_subtitle, hero_image, show_social } from '../../content/pages/home.json'
 import * as social from '../../content/meta/social.json'
 
 const useStyles = createUseStyles(theme => ({
@@ -121,14 +121,18 @@ const Hero = ({ parallax, ratio, mobile }) => {
                 <Typography variant="overline" className={classes.overline}>{top_subtitle}</Typography>
                 <Typography variant="h1" className={classes.title}>{title}</Typography>
                 <Typography variant="h6" className={classes.subtitle}>{bottom_subtitle}</Typography>
-                <Typography variant="subtitle2" className={classes.findUs}>Find us on</Typography>
-                <span className={classes.social}>
-                    <IconButton href={social.instagram}><InstagramIcon /></IconButton>
-                    <IconButton href={social.facebook}><FacebookIcon /></IconButton>
-                    <IconButton href={social.twitter}><TwitterIcon /></IconButton>
-                    <IconButton href={social.youtube}><YouTubeIcon /></IconButton>
-                    <IconButton href={social.linkedin}><LinkedInIcon /></IconButton>
-                </span>
+                { show_social &&
+                    <>
+                    <Typography variant="subtitle2" className={classes.findUs}>Find us on</Typography>
+                    <span className={classes.social}>
+                        { social.instagram && <IconButton href={social.instagram}><InstagramIcon /></IconButton> }
+                        { social.facebook && <IconButton href={social.facebook}><FacebookIcon /></IconButton> }
+                        { social.twitter && <IconButton href={social.twitter}><TwitterIcon /></IconButton> }
+                        { social.youtube && <IconButton href={social.youtube}><YouTubeIcon /></IconButton> }
+                        { social.linkedin && <IconButton href={social.linkedin}><LinkedInIcon /></IconButton> }
+                    </span>
+                    </>
+                }
             </div>
         </div>
     )

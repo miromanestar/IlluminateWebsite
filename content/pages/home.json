@@ -4,6 +4,7 @@
   "hero_image": "/images/uploads/hero.jpg",
   "subtitle": "test",
   "title": "Illuminate Marketing",
+  "show_social": true,
   "features": [
     {
       "title": "Social Media",
