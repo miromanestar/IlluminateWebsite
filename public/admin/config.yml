@@ -77,11 +77,11 @@ collections:
         name: "social-media"
         hint: "Add social media links here"
         fields:
-          - { label: Instagram, name: instagram, widget: string }
-          - { label: Facebook, name: facebook, widget: string }
-          - { label: Twitter, name: twitter, widget: string }
-          - { label: Youtube, name: youtube, widget: string }
-          - { label: LinkedIn, name: linkedin, widget: string }
+          - { label: Instagram, name: instagram, required: false, widget: string }
+          - { label: Facebook, name: facebook, required: false, widget: string }
+          - { label: Twitter, name: twitter, required: false, widget: string }
+          - { label: Youtube, name: youtube, required: false, widget: string }
+          - { label: LinkedIn, name: linkedin, required: false, widget: string }
       - file: "content/meta/navigation.json"
         label: "Navigation"
         name: "navigation"
