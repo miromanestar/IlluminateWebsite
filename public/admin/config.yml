@@ -23,24 +23,17 @@ collections: # A list of collections the CMS should be able to edit
           - { label:  Bottom Subtitle, name: bottom_subtitle, widget: string }
           - { label:  Title, name: title, widget: string }
           - { label:  Hero Image, name: hero_image, widget: image }
-
-      # - file: "content/pages/test.json"
-      #   label: "Test"
-      #   name: "test-page"
-      #   fields:
-      #     - {label: Title, name: title, widget: string}
-      #     - {label: Featured Image, name: featuredImage, widget: image}
-      #     - {label: Subtitle, name: subtitle, widget: markdown}
-      #     - {label: Body, name: body, widget: markdown}
-      #     - {label: Address, name: address, widget: text}
-      #     - {label: Phone, name: phone, widget: string}
-      #     - {label: Email Address, name: email, widget: string}
-      #     - label: "Meta"
-      #       required: false
-      #       name: "meta"
-      #       widget: "object"
-      #       fields:
-      #         - {label: Title, name: title, widget: string, required: false}
-      #         - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
-      #         - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
-      #         - {label: Noindex, name: noindex, widget: boolean, required: false}
+          - label: "Features"
+            name: "features"
+            widget: "list"
+            fields:
+              - { label:  Title, name: title, widget: string }
+              - { label:  Description, name: description, widget: string }
+          - label: "Team"
+            name: "team"
+            widget: "list"
+            fields:
+              - { label:  Name, name: name, widget: string }
+              - { label:  Title, name: title, widget: string }
+              - { label:  Image, name: image, widget: image }
+              - { label:  Description, name: description, widget: string }

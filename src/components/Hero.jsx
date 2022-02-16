@@ -14,6 +14,8 @@ import TwitterIcon from '@mui/icons-material/Twitter'
 import YouTubeIcon from '@mui/icons-material/YouTube'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
+import * as DATA from '../../content/pages/home.json'
+
 const useStyles = createUseStyles(theme => ({
     root: {
         width: '100%',
@@ -117,9 +119,9 @@ const Hero = ({ parallax, ratio, mobile }) => {
             />
 
             <div className={classes.container}>
-                <Typography variant="overline" className={classes.overline}>A SOUTHERN ADVENTIST UNIVERSITY ENACTUS PROJECT</Typography>
-                <Typography variant="h1" className={classes.title}>Illuminate Marketing</Typography>
-                <Typography variant="h6" className={classes.subtitle}>STUDENT-RUN MARKETING TEAM THAT WORKS WITH SMALL BUSINESSES TO HELP THEM GROW</Typography>
+                <Typography variant="overline" className={classes.overline}>{DATA.top_subtitle}</Typography>
+                <Typography variant="h1" className={classes.title}>{DATA.title}</Typography>
+                <Typography variant="h6" className={classes.subtitle}>{DATA.bottom_subtitle}</Typography>
                 <Typography variant="subtitle2" className={classes.findUs}>Find us on</Typography>
                 <span className={classes.social}>
                     <IconButton href="https://instagram.com"><InstagramIcon /></IconButton>
