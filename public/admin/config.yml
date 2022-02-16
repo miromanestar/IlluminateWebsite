@@ -9,6 +9,7 @@ media_folder: "images/uploads"
 collections: # A list of collections the CMS should be able to edit
   - name: "pages"
     format: "json"
+    extension: "json"
     label: "Page"
     delete: false # Prevent users from deleting documents in this collection
     editor:
@@ -16,21 +17,30 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - file: "content/pages/home.json"
         label: "Home"
-        name: "contact-page"
+        name: "home-page"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Featured Image, name: featuredImage, widget: image}
-          - {label: Subtitle, name: subtitle, widget: markdown}
-          - {label: Body, name: body, widget: markdown}
-          - {label: Address, name: address, widget: text}
-          - {label: Phone, name: phone, widget: string}
-          - {label: Email Address, name: email, widget: string}
-          - label: "Meta"
-            required: false
-            name: "meta"
-            widget: "object"
-            fields:
-              - {label: Title, name: title, widget: string, required: false}
-              - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
-              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
-              - {label: Noindex, name: noindex, widget: boolean, required: false}
+          - { label:  Top Subtitle, name: top_subtitle, widget: string }
+          - { label:  Bottom Subtitle, name: bottom_subtitle, widget: string }
+          - { label:  Title, name: title, widget: string }
+          - { label:  Hero Image, name: hero_image, widget: image }
+
+      # - file: "content/pages/test.json"
+      #   label: "Test"
+      #   name: "test-page"
+      #   fields:
+      #     - {label: Title, name: title, widget: string}
+      #     - {label: Featured Image, name: featuredImage, widget: image}
+      #     - {label: Subtitle, name: subtitle, widget: markdown}
+      #     - {label: Body, name: body, widget: markdown}
+      #     - {label: Address, name: address, widget: text}
+      #     - {label: Phone, name: phone, widget: string}
+      #     - {label: Email Address, name: email, widget: string}
+      #     - label: "Meta"
+      #       required: false
+      #       name: "meta"
+      #       widget: "object"
+      #       fields:
+      #         - {label: Title, name: title, widget: string, required: false}
+      #         - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
+      #         - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+      #         - {label: Noindex, name: noindex, widget: boolean, required: false}
