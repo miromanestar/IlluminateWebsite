@@ -4,7 +4,8 @@ backend:
   repo: miromanestar/IlluminateWebsite
 
 publish_mode: editorial_workflow
-media_folder: "images/uploads"
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "pages"
