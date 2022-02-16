@@ -1,9 +1,12 @@
 {
-  "title": "Test",
-  "featuredImage": "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg",
-  "subtitle": "test",
   "body": "test2",
-  "address": "afdsgdsfgsdf",
+  "top_subtitle": "A SOUTHERN ADVENTIST UNIVERSITY ENACTUS PROJECT",
+  "bottom_subtitle": "STUDENT-RUN MARKETING TEAM THAT WORKS WITH SMALL BUSINESSES TO HELP THEM GROW",
+  "featuredImage": "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg",
   "phone": "sdfgdsfg",
+  "address": "afdsgdsfgsdf",
+  "hero_image": "/images/uploads/hero.jpg",
+  "subtitle": "test",
+  "title": "Illuminate Marketing",
   "email": "dsfgdsfgdfsgsdfh"
 }
