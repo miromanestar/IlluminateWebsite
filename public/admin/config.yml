@@ -38,7 +38,7 @@ collections:
             widget: "object"
             fields:
               - { label:  Video URL, name: video_url, widget: string }
-              - { label:  Description, name: description, widget: string }
+              - { label:  Description, name: description, widget: text }
           - label: "Team Showcase"
             name: "team"
             widget: "list"
@@ -57,7 +57,7 @@ collections:
             widget: "list"
             fields:
               - { label:  Title, name: title, widget: string }
-              - { label:  Description, name: description, widget: string }
+              - { label:  Description, name: description, widget: text }
               - label:  "Text Alignment"
                 name: "text_align"
                 widget: "select"
