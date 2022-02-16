@@ -6,7 +6,7 @@ backend:
 publish_mode: editorial_workflow
 media_folder: "images/uploads"
 
-collections: # A list of collections the CMS should be able to edit
+collections:
   - name: "pages"
     format: "json"
     extension: "json"
@@ -89,23 +89,23 @@ collections: # A list of collections the CMS should be able to edit
       - file: "content/meta/navigation.json"
         label: "Navigation"
         name: "navigation"
-          fields:
-            - label: "Logo"
-              name: "logo"
-              widget: "image"
-            - label: "Header Label"
-              name: "header_label"
-              widget: "string"
-            - label: "Show label"
-              name: "show_label"
-              default: true
-              widget: "boolean"
-            - label: "Links"
-              name: "links"
-              widget: "list"
-              fields:
-                - { label:  Label, name: label, widget: string }
-                - { label:  URL, name: url, widget: string }
+        fields:
+          - label: "Logo"
+            name: "logo"
+            widget: "image"
+          - label: "Header Label"
+            name: "header_label"
+            widget: "string"
+          - label: "Show label"
+            name: "show_label"
+            default: true
+            widget: "boolean"
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label:  Label, name: label, widget: string }
+              - { label:  URL, name: url, widget: string }
       - file: "content/meta/theme.json"
         label: "Theme"
         name: "theme"
