@@ -7,19 +7,23 @@
   "features": [
     {
       "title": "Social Media",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "icon": "public"
     },
     {
       "title": "Graphic Design",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "icon": "brush"
     },
     {
       "title": "Marketing",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "icon": "corporate_fare"
     },
     {
       "title": "Business Connections",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "icon": "business_center"
     }
   ],
   "team": [
@@ -59,5 +63,9 @@
       "description": "The media team at Illuminate is dedicated to bringing our clients vision to life through social media & graphic design.",
       "image": "/images/uploads/gabriella.jpg"
     }
-  ]
+  ],
+  "video_card": {
+    "video_url": "https://www.youtube.com/watch?v=asJUXaJrPtU",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed tempus urna et pharetra."
+  }
 }
