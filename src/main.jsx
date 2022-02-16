@@ -9,6 +9,7 @@ import {
     CssBaseline
 } from '@mui/material'
 import './index.css'
+import '@material-design-icons/font'
 import App from './App'
 
 // THEME INSPIRATION https://demos.creative-tim.com/material-kit-react/#/pages/landing-pages/about-us
