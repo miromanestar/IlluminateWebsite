@@ -24,7 +24,7 @@ collections:
           - { label:  Title, name: title, widget: string }
           - { label:  Hero Image, name: hero_image, widget: image }
           - { label:  Show Social Media, name: show_social, default: true, widget: boolean }
-          - label: "Features"
+          - label: "Features Showcase"
             name: "features"
             widget: "list"
             max: 4
@@ -38,9 +38,10 @@ collections:
             fields:
               - { label:  Video URL, name: video_url, widget: string }
               - { label:  Description, name: description, widget: string }
-          - label: "Team"
+          - label: "Team Showcase"
             name: "team"
             widget: "list"
+            label_singular: "member"
             fields:
               - { label:  Name, name: name, widget: string }
               - { label:  Title, name: title, widget: string }
