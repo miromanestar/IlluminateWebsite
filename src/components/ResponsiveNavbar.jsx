@@ -193,7 +193,7 @@ const ResponsiveNavbar = () => {
                             disableScrollLock={true}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page.name} className={classes.button} sx={{ margin: '10px 10px !important', justifyContent: 'center' }} onClick={() => handleCloseNavMenu(page.route)}>
+                                <MenuItem key={page.name} className={classes.button} sx={{ margin: '10px 10px !important', justifyContent: 'center' }} onClick={() => handleCloseNavMenu(page.url)}>
                                     <Typography textAlign="center">{page.name}</Typography>
                                 </MenuItem>
                             ))}
