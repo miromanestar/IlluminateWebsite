@@ -56,6 +56,14 @@ const useStyles = createUseStyles(theme => ({
 
 const PersonCard = ( {person }) => {
     const classes = useStyles()
+    
+    const isExternal = () => {
+        if (person.image.includes('http')) {
+            return person.image
+        }
+        
+        return `${person.image}?nf_resize=smartcrop&w=800&h=800`
+    }
 
     return (
         <Paper className={classes.root} elevation={9}>
@@ -68,7 +76,7 @@ const PersonCard = ( {person }) => {
                     sm={1}
                 >
                     <div>
-                        <img src={person.image} alt={person.name} />
+                        <img src={isExternal()} alt={person.name} />
                     </div>
                 </Grid>
                 <Grid item container
