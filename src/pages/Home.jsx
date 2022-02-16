@@ -20,6 +20,8 @@ import PersonCard from '../components/PersonCard'
 import GabriellaImg from '../assets/gabriella.jpg'
 import KareenaImg from '../assets/kareena.jpg'
 
+import * as DATA from '../../content/pages/home.md'
+
 const useStyles = createUseStyles(theme => ({ 
     root: {
         backgroundColor: theme.colors.mutedWhite,
@@ -226,7 +228,7 @@ const peopleData = [
     {
         name: 'Jomari Villoso',
         title: 'Event Coordinator',
-        desc: 'Throwin\' a party.',
+        desc: 'Illuminate provides the opportunity to impact local and international organizations and to do so with a personal touch.',
         photo: 'https://media-exp1.licdn.com/dms/image/C4E03AQH0F23IalWgBQ/profile-displayphoto-shrink_800_800/0/1634828075744?e=1649894400&v=beta&t=KHuwmgoWaikEmjsEv6aHUaRAo9qA-V--acFfKH3rXHc'
     },
     {

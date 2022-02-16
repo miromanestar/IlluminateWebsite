@@ -108,29 +108,6 @@ const useStyles = createUseStyles((theme) => ({
     }
 }))
 
-const pages = [
-    {
-        name: 'Home',
-        route: '/'
-    },
-    {
-        name: 'About',
-        route: '/about'
-    },
-    {
-        name: 'What We Offer',
-        route: '/offer'
-    },
-    {
-        name: 'Contact',
-        route: '/contact'
-    },
-    {
-        name: 'Enactus',
-        route: '/enactus'
-    }
-]
-
 const ResponsiveNavbar = () => {
     const classes = useStyles()
     const navigate = useNavigate()
@@ -239,3 +216,22 @@ const ResponsiveNavbar = () => {
     );
 };
 export default ResponsiveNavbar;
+
+const pages = [
+    {
+        name: 'Home',
+        route: '/'
+    },
+    {
+        name: 'About',
+        route: '/about'
+    },
+    {
+        name: 'What We Offer',
+        route: '/offer'
+    },
+    {
+        name: 'Contact',
+        route: '/contact'
+    }
+]

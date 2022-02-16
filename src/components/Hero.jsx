@@ -12,7 +12,7 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import YouTubeIcon from '@mui/icons-material/YouTube'
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
 const useStyles = createUseStyles(theme => ({
     root: {
@@ -29,7 +29,7 @@ const useStyles = createUseStyles(theme => ({
         width: '100%',
         height: '75vh',
         objectFit: 'cover',
-        objectPosition: '50% 20%',
+        objectPosition: '50% 15%',
         filter: 'brightness(0.6)',
         position: 'absolute',
         transition: '0.01s transform',
