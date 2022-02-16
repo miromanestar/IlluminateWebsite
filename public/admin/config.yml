@@ -80,12 +80,12 @@ collections:
         label: "Social Media"
         name: "social-media"
         hint: "Add social media links here"
-          fields:
-            - { label: Instagram, name: instagram, widget: string }
-            - { label: Facebook, name: facebook, widget: string }
-            - { label: Twitter, name: twitter, widget: string }
-            - { label: Youtube, name: youtube, widget: string }
-            - { label: LinkedIn, name: linkedin, widget: string }
+        fields:
+          - { label: Instagram, name: instagram, widget: string }
+          - { label: Facebook, name: facebook, widget: string }
+          - { label: Twitter, name: twitter, widget: string }
+          - { label: Youtube, name: youtube, widget: string }
+          - { label: LinkedIn, name: linkedin, widget: string }
       - file: "content/meta/navigation.json"
         label: "Navigation"
         name: "navigation"
