@@ -1,21 +1,23 @@
 {
-    "logo": "/images/uploads/logo.png",
-    "links": [
-        {
-            "name": "Home",
-            "url": "/"
-        },
-        {
-            "name": "About",
-            "url": "/about"
-        },
-        {
-            "name": "What We Offer",
-            "url": "/offer"
-        },
-        {
-            "name": "Contact",
-            "url": "/contact"
-        }
-    ]
+  "logo": "/images/uploads/logo.png",
+  "links": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "About",
+      "url": "/about"
+    },
+    {
+      "name": "What We Offer",
+      "url": "/offer"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
+    }
+  ],
+  "header_label": "Illuminate",
+  "show_label": true
 }
