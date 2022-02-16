@@ -7,6 +7,7 @@ publish_mode: editorial_workflow
 media_folder: "images/uploads"
 
 collections: # A list of collections the CMS should be able to edit
+  format: "json"
   - name: "pages"
     label: "Page"
     delete: false # Prevent users from deleting documents in this collection
