@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
+    "netlify-cli": "^9.6.4",
     "vite": "^2.7.13"
   }
 }
