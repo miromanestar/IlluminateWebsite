@@ -14,7 +14,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       preview: false
     files:
-      - file: "content/pages/home.md"
+      - file: "content/pages/home.json"
         label: "Home"
         name: "contact-page"
         fields:
