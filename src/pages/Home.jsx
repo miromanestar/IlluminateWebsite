@@ -20,7 +20,8 @@ import PersonCard from '../components/PersonCard'
 import GabriellaImg from '../assets/gabriella.jpg'
 import KareenaImg from '../assets/kareena.jpg'
 
-import * as DATA from '../../content/pages/home.md'
+import * as DATA from '../../content/pages/home.json'
+console.log(DATA)
 
 const useStyles = createUseStyles(theme => ({ 
     root: {
