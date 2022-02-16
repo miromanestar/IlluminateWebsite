@@ -15,8 +15,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
-import * as DATA from '../../content/meta/navigation.json'
-const pages = DATA.links
+import { links, show_label, logo } from '../../content/meta/navigation.json'
 
 const useStyles = createUseStyles((theme) => ({
     root: {
@@ -122,6 +121,7 @@ const ResponsiveNavbar = () => {
     }
 
     const handleCloseNavMenu = (route) => {
+        console.log(route)
         navigate(route)
         setAnchorElNav(null)
     }
@@ -149,14 +149,14 @@ const ResponsiveNavbar = () => {
                         style={{ display: { xs: 'none', md: 'flex' } }}
                         to="/"
                     >
-                        <img src={DATA.logo} alt="" />
+                        <img src={logo} alt="" />
                         <Typography
                             variant="h6"
                             noWrap
                             component="div"
                             sx={{ mr: 2 }}
                         >
-                            {DATA.show_label && 'Illuminate'}
+                            {show_label && 'Illuminate'}
                         </Typography>
                     </Link>
 
@@ -192,22 +192,22 @@ const ResponsiveNavbar = () => {
                             PaperProps={{ className: classes.menu }}
                             disableScrollLock={true}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page.name} className={classes.button} sx={{ margin: '10px 10px !important', justifyContent: 'center' }} onClick={() => handleCloseNavMenu(page.url)}>
-                                    <Typography textAlign="center">{page.name}</Typography>
+                            {links.map((link) => (
+                                <MenuItem key={link.name} className={classes.button} sx={{ margin: '10px 10px !important', justifyContent: 'center' }} onClick={() => handleCloseNavMenu(link.url)}>
+                                    <Typography textAlign="center">{link.name}</Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
                     </Box>
 
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                        {pages.map((page) => (
+                        {links.map((link) => (
                             <Button
                                 className={classes.button}
-                                key={page.name}
-                                onClick={() => handleCloseNavMenu(page.route)}
+                                key={link.name}
+                                onClick={() => handleCloseNavMenu(link.url)}
                             >
-                                {page.name}
+                                {link.name}
                             </Button>
                         ))}
                     </Box>
