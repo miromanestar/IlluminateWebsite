@@ -119,6 +119,10 @@ collections:
               - { label:  Muted White, name: muted_white, allowInput: true, enableAlpha: true, widget: color }
               - { label:  Muted Text, name: muted_text, allowInput: true, enableAlpha: true, widget: color }
               - { label:  Muted Text Alt, name: muted_text2, allowInput: true, enableAlpha: true, widget: color }
+          - label: "Gradients"
+            name: "gradients"
+            widget: "object"
+            fields:
               - { label:  "Dark Gradient", name: dark_gradient, widget: string }
           - label: "Box Shadows"
             name: "box_shadows"
