@@ -30,7 +30,7 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - { label:  Title, name: title, widget: string }
               - { label:  Description, name: description, widget: string }
-              - { label:  Icon, name: icon, widget: string, hint: [View available icons](https://marella.me/material-design-icons/demo/font/)  }
+              - { label:  Icon, name: icon, widget: string, hint: "[View available icons](https://marella.me/material-design-icons/demo/font/)"  }
           - label: "Video Card"
             name: "video_card"
             widget: "object"
