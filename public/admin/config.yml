@@ -10,8 +10,8 @@ collections: # A list of collections the CMS should be able to edit
   - name: "pages"
     format: "json"
     extension: "json"
-    label: "Page"
-    delete: false # Prevent users from deleting documents in this collection
+    label: "Pages"
+    delete: false
     editor:
       preview: false
     files:
@@ -30,7 +30,7 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - { label:  Title, name: title, widget: string }
               - { label:  Description, name: description, widget: string }
-              - { label:  Icon, name: icon, widget: string, hint: "[View available icons](https://marella.me/material-design-icons/demo/font/)"  }
+              - { label:  Icon, name: icon, widget: string, hint: "[Click here to view available icons](https://marella.me/material-design-icons/demo/font/)"  }
           - label: "Video Card"
             name: "video_card"
             widget: "object"
@@ -45,3 +45,84 @@ collections: # A list of collections the CMS should be able to edit
               - { label:  Title, name: title, widget: string }
               - { label:  Description, name: description, widget: string }
               - { label:  Image, name: image, widget: image }
+          - label: "Social Media"
+            name: "social_media"
+            widget: "list"
+            fields:
+              - { label:  Name, name: name, widget: string }
+              - { label:  URL, name: url, widget: string }
+              - { label:  Icon, name: icon, widget: string, hint: "[Click here to view available icons](https://marella.me/material-design-icons/demo/font/)"  }
+      - file: "content/pages/about.json"
+        label: "About"
+        name: "about-page"
+        fields:
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            fields:
+              - { label:  Title, name: title, widget: string }
+              - { label:  Description, name: description, widget: string }
+              - label:  "Text Alignment"
+                name: "text_align"
+                widget: "select"
+                options: ["left", "center", "right", "justify"]
+                default: "left"
+
+  - name: "meta"
+    format: "json"
+    extension: "json"
+    label: "Meta"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - file: "content/meta/social.json"
+        label: "Social Media"
+        name: "social-media"
+        hint: "Add social media links here"
+          fields:
+            - { label: Instagram, name: instagram, widget: string }
+            - { label: Facebook, name: facebook, widget: string }
+            - { label: Twitter, name: twitter, widget: string }
+            - { label: Youtube, name: youtube, widget: string }
+            - { label: LinkedIn, name: linkedin, widget: string }
+      - file: "content/meta/navigation.json"
+        label: "Navigation"
+        name: "navigation"
+          fields:
+            - label: "Logo"
+              name: "logo"
+              widget: "image"
+            - label: "Header Label"
+              name: "header_label"
+              widget: "string"
+            - label: "Show label"
+              name: "show_label"
+              default: true
+              widget: "boolean"
+            - label: "Links"
+              name: "links"
+              widget: "list"
+              fields:
+                - { label:  Label, name: label, widget: string }
+                - { label:  URL, name: url, widget: string }
+      - file: "content/meta/theme.json"
+        label: "Theme"
+        name: "theme"
+        fields:
+          - label: "Palette"
+            name: "palette"
+            widget: "object"
+            fields:
+              - { label:  Primary, name: primary, allowInput: true, enableAlpha: true, widget: color }
+              - { label:  Secondary, name: secondary, allowInput: true, enableAlpha: true, widget: color }
+              - { label:  Muted White, name: muted_white, allowInput: true, enableAlpha: true, widget: color }
+              - { label:  Muted Text, name: muted_text, allowInput: true, enableAlpha: true, widget: color }
+              - { label:  Muted Text Alt, name: muted_text2, allowInput: true, enableAlpha: true, widget: color }
+              - { label:  "Dark Gradient", name: dark_gradient, widget: string }
+          - label: "Box Shadows"
+            name: "box_shadows"
+            widget: "object"
+            fields:
+              - { label:  "Light", name: light, widget: string }
+              - { label:  "Feather", name: feather, widget: string }

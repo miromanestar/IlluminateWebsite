@@ -4,6 +4,7 @@ import {
     Container,
     Grid,
     Typography,
+    Icon,
     useTheme,
     useMediaQuery
 } from '@mui/material'
@@ -11,17 +12,13 @@ import Zoom from 'react-reveal/Zoom'
 import Main from '../components/Main'
 import Hero from '../components/Hero'
 import Youtube from '../components/Youtube'
-import PublicIcon from '@mui/icons-material/Public';
-import BrushIcon from '@mui/icons-material/Brush';
-import CorporateFareIcon from '@mui/icons-material/CorporateFare';
-import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import PersonCard from '../components/PersonCard'
 
-import GabriellaImg from '../assets/gabriella.jpg'
-import KareenaImg from '../assets/kareena.jpg'
+import { team, features, video_card } from '../../content/pages/home.json'
 
-import * as DATA from '../../content/pages/home.json'
-console.log(DATA)
+const peopleData = team || []
+const infoData = features || []
+const videoId = video_card.video_url || ''
 
 const useStyles = createUseStyles(theme => ({ 
     root: {
@@ -123,9 +120,9 @@ const App = () => {
                                         <Grid item xs={1} md={1} key={`card_${ index }`}>
                                             <Zoom delay={!isMobile ? 150 * (index + 1) : 0}>
                                                 <div>
-                                                    {item.icon}
+                                                    <Icon color="primary">{item.icon}</Icon>
                                                     <Typography variant="h6">{item.title}</Typography>
-                                                    <Typography variant="subtitle1">{item.desc}</Typography>
+                                                    <Typography variant="subtitle1">{item.description}</Typography>
                                                 </div>
                                             </Zoom>
                                         </Grid>
@@ -138,7 +135,7 @@ const App = () => {
                                 <Zoom delay={!isMobile ? 150 * 5 : 0}>
                                     <div className={classes.cardContainer}>
                                         <div className={classes.videoContainer}>
-                                            <Youtube videoId={videoId} style={{ 
+                                            <Youtube url={videoId} style={{ 
                                                 borderRadius: '0.75rem' 
                                             }}/>
                                         </div>
@@ -177,71 +174,3 @@ const App = () => {
 }
 
 export default App
-
-// const infoData = [
-//     {
-//         title: 'Social Media',
-//         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-//         icon: <PublicIcon />,
-//     },
-//     {
-//         title: 'Graphic Design',
-//         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-//         icon: <BrushIcon />,
-//     },
-//     {
-//         title: 'Marketing',
-//         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-//         icon: <CorporateFareIcon />,
-//     },
-//     {
-//         title: 'Business Connections',
-//         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-//         icon: <BusinessCenterIcon />,
-//     }
-// ]
-
-// const peopleData = [
-//     {
-//         name: 'Roman Johnson',
-//         title: 'Project Manager',
-//         desc: 'We at Illuminate present unparalled an unparalleled opportunity for students to learn and grow.',
-//         photo: 'https://media-exp1.licdn.com/dms/image/C5603AQHC-a_xla9IQA/profile-displayphoto-shrink_800_800/0/1636062296861?e=1648684800&v=beta&t=VkRY_CCjFC2_QITTAx5agdXJ-xhOBLT8kTrehXura8M'
-//     },
-//     {
-//         name: 'Mason Harmon',
-//         title: 'Project Manager',
-//         desc: 'Illuminate provides the opportunity to make a difference in the local community and facilitates a positive change.',
-//         photo: 'https://media-exp1.licdn.com/dms/image/C4E03AQF6Ujdxf25WVQ/profile-displayphoto-shrink_800_800/0/1638888697683?e=1648684800&v=beta&t=RT-R3eWuEXMt1pjy5WZzAX68yjYy8ZXBNUgahDHOM-k'
-//     },
-//     {
-//         name: 'Kareena Hansen',
-//         title: 'Client Relations',
-//         desc: 'Enactus synergizes the strengths of students and the resources of local businesses to positively impact their local community.',
-//         photo: `${KareenaImg}`
-//     },
-//     {
-//         name: 'Esther Manu',
-//         title: 'Client Services',
-//         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-//         photo: 'https://media-exp1.licdn.com/dms/image/C4D03AQFgUustatmVhQ/profile-displayphoto-shrink_800_800/0/1575213214388?e=1649894400&v=beta&t=0v-lLZXTwGYYYoHYSUOmY3zYMeZ2WFJC0J83hh4SgXc'
-//     },
-//     {
-//         name: 'Jomari Villoso',
-//         title: 'Event Coordinator',
-//         desc: 'Illuminate provides the opportunity to impact local and international organizations and to do so with a personal touch.',
-//         photo: 'https://media-exp1.licdn.com/dms/image/C4E03AQH0F23IalWgBQ/profile-displayphoto-shrink_800_800/0/1634828075744?e=1649894400&v=beta&t=KHuwmgoWaikEmjsEv6aHUaRAo9qA-V--acFfKH3rXHc'
-//     },
-//     {
-//         name: 'Gabriella Grundy',
-//         title: 'Social Media',
-//         desc: 'The media team at Illuminate is dedicated to bringing our clients vision to life through social media & graphic design.',
-//         photo: `${GabriellaImg}`
-//     }
-// ]
-
-const peopleData = DATA.team || []
-const infoData = DATA.features || []
-const videoId = DATA.video_card.video_url || ''
-
-// const videoId = 'asJUXaJrPtU'

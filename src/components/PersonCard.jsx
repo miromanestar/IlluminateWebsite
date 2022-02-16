@@ -68,7 +68,7 @@ const PersonCard = ( {person }) => {
                     sm={1}
                 >
                     <div>
-                        <img src={person.photo} alt={person.name} />
+                        <img src={person.image} alt={person.name} />
                     </div>
                 </Grid>
                 <Grid item container
@@ -80,7 +80,7 @@ const PersonCard = ( {person }) => {
                     <Box className={classes.info}>
                         <Typography className={classes.name} variant="h5">{person.name}</Typography>
                         <Typography className={classes.subtitle} variant="h6">{person.title}</Typography>
-                        <Typography className={classes.description} variant="body1">{person.desc}</Typography>
+                        <Typography className={classes.description} variant="body1">{person.description}</Typography>
                     </Box>
                 </Grid>
             </Grid>

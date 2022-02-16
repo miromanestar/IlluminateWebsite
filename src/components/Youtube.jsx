@@ -20,9 +20,10 @@ const useStyles = createUseStyles(theme => ({
     }
 }))
 
-const Youtube = ({ videoId, style }) => {
+const Youtube = ({ url, style }) => {
     const classes = useStyles()
 
+    const videoId = url.split('v=')[1]
     return (
         <div className={classes.root} style={style}>
             <iframe

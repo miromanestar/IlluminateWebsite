@@ -15,7 +15,8 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
-import LogoImg from '../assets/logo.png'
+import * as DATA from '../../content/meta/navigation.json'
+const pages = DATA.links
 
 const useStyles = createUseStyles((theme) => ({
     root: {
@@ -148,14 +149,14 @@ const ResponsiveNavbar = () => {
                         style={{ display: { xs: 'none', md: 'flex' } }}
                         to="/"
                     >
-                        <img src={LogoImg} alt="" />
+                        <img src={DATA.logo} alt="" />
                         <Typography
                             variant="h6"
                             noWrap
                             component="div"
                             sx={{ mr: 2 }}
                         >
-                            Illuminate
+                            {DATA.show_label && 'Illuminate'}
                         </Typography>
                     </Link>
 
@@ -216,22 +217,3 @@ const ResponsiveNavbar = () => {
     );
 };
 export default ResponsiveNavbar;
-
-const pages = [
-    {
-        name: 'Home',
-        route: '/'
-    },
-    {
-        name: 'About',
-        route: '/about'
-    },
-    {
-        name: 'What We Offer',
-        route: '/offer'
-    },
-    {
-        name: 'Contact',
-        route: '/contact'
-    }
-]

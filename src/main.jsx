@@ -12,25 +12,28 @@ import './index.css'
 import '@material-design-icons/font'
 import App from './App'
 
+import * as THEME from '../content/meta/theme.json'
+
 // THEME INSPIRATION https://demos.creative-tim.com/material-kit-react/#/pages/landing-pages/about-us
 const theme = createTheme({
     colors: {
-        primary: '#dd9a08',
-        mutedWhite: '#F0F2F5',
-        mutedText: '#7B809A',
-        mutedText2: '#E0E1E3',
-        darkGradient: 'linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))'
+        primary: THEME.palette.primary,
+        secondary: THEME.palette.secondary,
+        mutedWhite: THEME.palette.muted_white,
+        mutedText: THEME.palette.muted_text,
+        mutedText2: THEME.palette.muted_text2,
+        darkGradient: THEME.gradients.dark_gradient
     },
 
     boxShadows: {
-        light: 'rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem, rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem',
-        feather: 'rgb(0 0 0 / 5%) 0rem 1.25rem 1.6875rem 0rem'
+        light: THEME.box_shadows.light,
+        feather: THEME.box_shadows.feather,
     },
 
     //MUI overrides
     palette: {
         primary: {
-            main: '#F8B936',
+            main: THEME.palette.primary,
             contrastText: '#fff'
         }
     }

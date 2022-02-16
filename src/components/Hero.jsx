@@ -6,15 +6,14 @@ import {
 } from '@mui/material'
 import clsx from 'clsx'
 
-import HeroImg from '../assets/hero.jpg'
-
 import InstagramIcon from '@mui/icons-material/Instagram'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import YouTubeIcon from '@mui/icons-material/YouTube'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
-import * as DATA from '../../content/pages/home.json'
+import { title, top_subtitle, bottom_subtitle, hero_image } from '../../content/pages/home.json'
+import * as social from '../../content/meta/social.json'
 
 const useStyles = createUseStyles(theme => ({
     root: {
@@ -110,7 +109,7 @@ const Hero = ({ parallax, ratio, mobile }) => {
     return (
         <div className={classes.root}>
             <img
-                src={HeroImg}
+                src={hero_image}
                 className={mobile ? classes.img : clsx(classes.img, classes.disableParallax)}
                 alt="Illuminate Team"
                 style={{
@@ -119,16 +118,16 @@ const Hero = ({ parallax, ratio, mobile }) => {
             />
 
             <div className={classes.container}>
-                <Typography variant="overline" className={classes.overline}>{DATA.top_subtitle}</Typography>
-                <Typography variant="h1" className={classes.title}>{DATA.title}</Typography>
-                <Typography variant="h6" className={classes.subtitle}>{DATA.bottom_subtitle}</Typography>
+                <Typography variant="overline" className={classes.overline}>{top_subtitle}</Typography>
+                <Typography variant="h1" className={classes.title}>{title}</Typography>
+                <Typography variant="h6" className={classes.subtitle}>{bottom_subtitle}</Typography>
                 <Typography variant="subtitle2" className={classes.findUs}>Find us on</Typography>
                 <span className={classes.social}>
-                    <IconButton href="https://instagram.com"><InstagramIcon /></IconButton>
-                    <IconButton href="https://facebook.com"><FacebookIcon /></IconButton>
-                    <IconButton href="https://twitter.com"><TwitterIcon /></IconButton>
-                    <IconButton href="https://youtube.com"><YouTubeIcon /></IconButton>
-                    <IconButton href="https://linkedin.com"><LinkedInIcon /></IconButton>
+                    <IconButton href={social.instagram}><InstagramIcon /></IconButton>
+                    <IconButton href={social.facebook}><FacebookIcon /></IconButton>
+                    <IconButton href={social.twitter}><TwitterIcon /></IconButton>
+                    <IconButton href={social.youtube}><YouTubeIcon /></IconButton>
+                    <IconButton href={social.linkedin}><LinkedInIcon /></IconButton>
                 </span>
             </div>
         </div>

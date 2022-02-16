@@ -1,0 +1,21 @@
+{
+    "logo": "/images/uploads/logo.png",
+    "links": [
+        {
+            "name": "Home",
+            "route": "/"
+        },
+        {
+            "name": "About",
+            "route": "/about"
+        },
+        {
+            "name": "What We Offer",
+            "route": "/offer"
+        },
+        {
+            "name": "Contact",
+            "route": "/contact"
+        }
+    ]
+}
