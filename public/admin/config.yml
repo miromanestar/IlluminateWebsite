@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: main
   repo: miromanestar/IlluminateWebsite
+  use_large_media_transforms_in_media_library: false
 
 publish_mode: editorial_workflow
 media_folder: "public/images/uploads"
