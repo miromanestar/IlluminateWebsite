@@ -3,7 +3,7 @@ import { createUseStyles } from 'react-jss'
 import { Typography } from '@mui/material'
 import clsx from 'clsx'
 
-import HeaderImg from '../assets/light-header.jpg'
+import { misc as DATA } from '../../content/meta/theme.json'
 
 const useStyles = createUseStyles(theme => ({
     root: {
@@ -41,7 +41,7 @@ const Header = ({ title, titleClassName }) => {
     return (
         <div className={classes.root}>
             <img
-                src={HeaderImg}
+                src={DATA.header_image}
                 className={classes.img}
                 alt="Illuminate Header"
             />

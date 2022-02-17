@@ -49,6 +49,19 @@ collections:
               - { label:  Title, name: title, widget: string }
               - { label:  Description, name: description, widget: string }
               - { label:  Image, name: image, widget: image }
+      - file: "content/pages/offers.json"
+        label: "Offers"
+        name: "offers-page"
+        fields:
+          - label: "Offers"
+            name: "offers"
+            widget: "list"
+            fields:
+              - { label:  Title, name: title, widget: string }
+              - { label:  Price, name: price, widget: string }
+              - label: "Features"
+                name: "features"
+                widget: "list"
       - file: "content/pages/about.json"
         label: "About"
         name: "about-page"
@@ -127,3 +140,8 @@ collections:
             fields:
               - { label:  "Light", name: light, widget: string }
               - { label:  "Feather", name: feather, widget: string }
+          - label: "Misc"
+            name: "misc"
+            widget: "object"
+            fields:
+              - { label: "Header Image", name: header_image, widget: image }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { createUseStyles } from 'react-jss';
 import {
@@ -8,7 +8,6 @@ import {
     Typography,
     Menu
 } from '@mui/material'
-import { debounce } from '../tools/debounce'
 
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
@@ -88,7 +87,6 @@ const useStyles = createUseStyles((theme) => ({
 
     button: {
         backgroundColor: theme.colors.primary + ' !important',
-        margin: '0 10px !important',
         borderRadius: '10px !important',
         padding: '10px 20px !important',
         fontWeight: 'bold',
@@ -113,32 +111,15 @@ const ResponsiveNavbar = () => {
     const navigate = useNavigate()
 
     const [anchorElNav, setAnchorElNav] = React.useState(null)
-    const [prevScrollPos, setPrevScrollPos] = useState(0);
-    const [visible, setVisible] = useState(true)
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget)
     }
 
     const handleCloseNavMenu = (route) => {
-        console.log(route)
         navigate(route)
         setAnchorElNav(null)
     }
-
-    const handleScroll = debounce(() => {
-        const currentScrollPos = window.pageYOffset;
-
-        setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10);
-        setPrevScrollPos(currentScrollPos);
-    }, 100)
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
-
-        return () => window.removeEventListener('scroll', handleScroll)
-
-    }, [prevScrollPos, visible, handleScroll])
 
     return (
         <div className={classes.root}>
@@ -200,7 +181,7 @@ const ResponsiveNavbar = () => {
                         </Menu>
                     </Box>
 
-                    <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                    <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: '20px' }}>
                         {links.map((link) => (
                             <Button
                                 className={classes.button}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import { createUseStyles } from 'react-jss'
 
 import AnimatedRoutes from './components/AnimatedRoutes'
@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 
 import Home from './pages/Home'
 import About from './pages/About'
+import Offers from './pages/Offers'
 import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 import ScrollTop from './components/ScrollTop'
@@ -29,6 +30,7 @@ const App = () => {
                 <AnimatedRoutes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
+                    <Route path="/offers" element={<Offers />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="*" element={<NotFound />} />
                 </AnimatedRoutes>
