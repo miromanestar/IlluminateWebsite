@@ -32,13 +32,14 @@ const useStyles = createUseStyles(theme => ({
         backgroundColor: `${theme.colors.primary} !important`
     },
 
-    price: {
+    subtitle: {
         textAlign: 'center',
     },
 
-    features: {
+    content: {
         margin: theme.spacing(0, 4),
-        padding: theme.spacing(2)
+        padding: theme.spacing(2),
+        paddingBottom: theme.spacing(4)
     },
 
     feature: {
@@ -47,7 +48,7 @@ const useStyles = createUseStyles(theme => ({
     }
 }))
 
-const ContentCard = ({ title, price, cls, children }) => {
+const ContentCard = ({ title, subtitle, cls, children }) => {
     const classes = useStyles()
 
     return (
@@ -55,8 +56,8 @@ const ContentCard = ({ title, price, cls, children }) => {
             <Paper className={classes.title} elevation={4}>
                 <Typography variant="h4">{title}</Typography>
             </Paper>
-            <Typography className={classes.price} variant="h4">{price}</Typography>
-            <div className={classes.features}>
+            <Typography className={classes.subtitle} variant="h4">{subtitle}</Typography>
+            <div className={classes.content}>
                 {children}
             </div>
         </Paper>

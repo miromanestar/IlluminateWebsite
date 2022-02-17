@@ -1,7 +1,6 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import {
-    Grid,
     Typography
 } from '@mui/material'
 import Header from '../components/Header'
@@ -47,7 +46,7 @@ const Offers = () => {
                         <ContentCard
                             key={`offer_${ index }`}
                             title={offer.title}
-                            price={offer.price}
+                            subtitle={offer.price}
                             cls={classes.card}
                         >
                             {
