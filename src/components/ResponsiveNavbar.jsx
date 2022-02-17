@@ -49,7 +49,7 @@ const useStyles = createUseStyles((theme) => ({
         borderRadius: '10px !important',
         backdropFilter: 'blur(20px)',
         backgroundColor: 'rgba(0, 0, 0, 0.2) !important',
-        transform: 'translateY(15px) !important',
+        transform: 'translateY(15px) translateX(-4px) !important',
 
         '@supports (-moz-appearance: none)': {
             backgroundColor: 'rgba(0, 0, 0, 0.4) !important',
