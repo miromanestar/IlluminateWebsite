@@ -12,7 +12,8 @@ import Header from '../components/Header'
 
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
-import Mountain from '../assets/mountain.jpg'
+
+import * as DATA from '../../content/pages/contact.json'
 
 const useStyles = createUseStyles(theme => ({ 
     root: {
@@ -109,13 +110,13 @@ const Contact = () => {
             >
                 <Grid item xs={1} md={1} className={classes.info}>
                     <div className={classes.imgContainer}>
-                        <img src={Mountain} alt="mountain" />
+                        <img src={DATA.background_image} alt="mountain" />
                         <div className={classes.gradient} />
                     </div>
                     <div className={classes.infoText}>
                         <Typography variant="h5">Contact Information</Typography>
-                        <Typography className={classes.contact} variant="subtitle1"><PhoneIcon />666-666-0666</Typography>
-                        <Typography className={classes.contact} variant="subtitle1"><EmailIcon />contact@illuminatesau.com</Typography>
+                        <Typography className={classes.contact} variant="subtitle1"><PhoneIcon />{DATA.phone}</Typography>
+                        <Typography className={classes.contact} variant="subtitle1"><EmailIcon />{DATA.email}</Typography>
                     </div>
                 </Grid>
 
