@@ -1,8 +1,8 @@
 {
-    "header": "Contact Information",
-    "welcome": "We'd love to hear from you!",
-    "address": "Address",
-    "phone": "N/A",
-    "email": "N/A",
-    "background_image": "/images/uploads/mountain.jpg"
+  "header": "Contact Information",
+  "welcome": "We'd love to hear from you!",
+  "address": "Address",
+  "phone": "(423) 236-2537",
+  "email": "Enactus@southern.edu",
+  "background_image": "/images/uploads/mountain.jpg"
 }
