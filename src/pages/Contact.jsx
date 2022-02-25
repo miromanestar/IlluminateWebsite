@@ -77,6 +77,10 @@ const useStyles = createUseStyles(theme => ({
     },
 
     form: {
+        width: '100%',
+    },
+
+    formControl: {
         margin: '16px',
         width: '100%',
 
@@ -127,13 +131,15 @@ const Contact = () => {
                     alignItems="center"
                     justifyContent="center"
                 >
-                    <FormControl className={classes.form}>
-                        <Typography variant="h5">We'd love to hear from you!</Typography>
-                        <TextField type="text" variant="filled" label="Name" />
-                        <TextField type="text" variant="filled" label="Email" />
-                        <TextField multiline variant="filled" label="Message" />
-                        <Button variant="contained">Submit</Button>
-                    </FormControl>
+                    <form className={classes.form} name="contact" method="POST" data-netlify="true">
+                        <FormControl className={classes.formControl}>
+                            <Typography variant="h5">We'd love to hear from you!</Typography>
+                            <TextField type="text" variant="filled" name="name" label="Name" />
+                            <TextField type="text" variant="filled" name="email" label="Email" />
+                            <TextField multiline variant="filled" name="message" label="Message" />
+                            <Button variant="contained" type="submit">Submit</Button>
+                        </FormControl>
+                    </form>
                 </Grid>
             </Grid>
         </Main>
