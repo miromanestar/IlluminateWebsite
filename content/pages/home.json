@@ -12,22 +12,22 @@
   "features": [
     {
       "title": "Social Media",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "description": "Marketing across multiple platforms with a focus on customer visibility",
       "icon": "public"
     },
     {
       "title": "Graphic Design",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "description": "Posters, social media posts, flyers, we design it all",
       "icon": "brush"
     },
     {
       "title": "Marketing",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "description": "With a personal touch we enhance a company's marketability",
       "icon": "corporate_fare"
     },
     {
       "title": "Business Connections",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "description": "Local businesses and community networks are at our finger tips",
       "icon": "business_center"
     }
   ],
