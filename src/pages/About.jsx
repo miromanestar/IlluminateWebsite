@@ -39,20 +39,23 @@ const useStyles = createUseStyles(theme => ({
     imageContainer: {
         width: 'fit-content',
         marginBottom: '10px',
+        position: 'relative',
 
         '&:nth-child(1)': {
-            '& img': {
-                height: '50px'
-            }
+            zIndex: 3
         },
 
         '&:nth-child(2)': {
+            zIndex: 2,
+            transform: 'translateX(130%) translateY(-30%)',
+
             '& img': {
-                height: '100px'
+                height: '250px',
             }
         },
 
         '&:nth-child(3)': {
+            zIndex: 1,
             '& img': {
                 height: '200px'
             }
