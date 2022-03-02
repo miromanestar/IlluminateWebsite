@@ -68,22 +68,21 @@ collections:
         name: "about-page"
         fields:
           - { label:  Title, name: title, widget: string }
-          - { label:  Subtitle, name: subtitle, widget: string }
-          - { label:  Content, name: content, widget: string }
+          - { label:  Subtitle, name: subtitle, widget: text }
+          - { label:  Content, name: content, widget: text }
           - label: "Images"
             name: "images"
             widget: "list"
-            summary: description
             fields:
-              - { label:  Image, name: image, widget: image }
               - { label:  Description, name: description, widget: string }
+              - { label:  Image, name: image, widget: image }
           - label: "Quotes"
             name: "quotes"
             widget: "list"
             fields:
               - { label:  Name, name: name, widget: string }
               - { label:  Subtitle, name: subtitle, widget: string }
-              - { label:  Content, name: content, widget: string }
+              - { label:  Content, name: content, widget: text }
               - { label:  Icon, name: icon, widget: string, hint: "[Click here to view available icons](https://marella.me/material-design-icons/demo/font/)" }
       - file: "content/pages/contact.json"
         label: "Contact"
