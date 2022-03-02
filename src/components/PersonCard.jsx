@@ -54,7 +54,7 @@ const useStyles = createUseStyles(theme => ({
     },
 }))
 
-const PersonCard = ( {person }) => {
+const PersonCard = ({ person }) => {
     const classes = useStyles()
     
     const isExternal = () => {

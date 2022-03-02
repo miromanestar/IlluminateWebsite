@@ -29,7 +29,7 @@ const useStyles = createUseStyles(theme => ({
 
     social: {
         position: 'absolute',
-        left: '20px',
+        left: '1.5vw',
 
         '& a': {
             backgroundColor: theme.colors.primary,

@@ -73,11 +73,18 @@ collections:
           - label: "Images"
             name: "images"
             widget: "list"
-            max: 3
             summary: description
             fields:
               - { label:  Image, name: image, widget: image }
               - { label:  Description, name: description, widget: string }
+          - label: "Quotes"
+            name: "quotes"
+            widget: "list"
+            fields:
+              - { label:  Name, name: name, widget: string }
+              - { label:  Subtitle, name: subtitle, widget: string }
+              - { label:  Content, name: content, widget: string }
+              - { label:  Icon, name: icon, widget: string, hint: "[Click here to view available icons](https://marella.me/material-design-icons/demo/font/)" }
       - file: "content/pages/contact.json"
         label: "Contact"
         name: "contact-page"

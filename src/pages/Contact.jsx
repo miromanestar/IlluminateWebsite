@@ -131,7 +131,7 @@ const Contact = () => {
                     alignItems="center"
                     justifyContent="center"
                 >
-                    <form className={classes.form} name="contact" method="POST" data-netlify="true">
+                    <form className={classes.form} name="contact" method="POST" netlify>
                         <FormControl className={classes.formControl}>
                             <Typography variant="h5">We'd love to hear from you!</Typography>
                             <TextField type="text" variant="filled" name="name" label="Name" />
