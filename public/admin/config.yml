@@ -74,6 +74,7 @@ collections:
             name: "images"
             widget: "list"
             max: 3
+            summary: description
             fields:
               - { label:  Image, name: image, widget: image }
               - { label:  Description, name: description, widget: string }

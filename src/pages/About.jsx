@@ -32,12 +32,31 @@ const useStyles = createUseStyles(theme => ({
         '& img': {
             height: '200px',
             borderRadius: '0.75rem',
-            boxShadow: theme.boxShadows.dark
-        }
+            boxShadow: theme.boxShadows.dark,
+        },
     },
 
     imageContainer: {
         width: 'fit-content',
+        marginBottom: '10px',
+
+        '&:nth-child(1)': {
+            '& img': {
+                height: '50px'
+            }
+        },
+
+        '&:nth-child(2)': {
+            '& img': {
+                height: '100px'
+            }
+        },
+
+        '&:nth-child(3)': {
+            '& img': {
+                height: '200px'
+            }
+        }
     },
 
     imgDesc: {
