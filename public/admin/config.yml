@@ -67,17 +67,16 @@ collections:
         label: "About"
         name: "about-page"
         fields:
-          - label: "Sections"
-            name: "sections"
+          - { label:  Title, name: title, widget: string }
+          - { label:  Subtitle, name: subtitle, widget: string }
+          - { label:  Content, name: content, widget: string }
+          - label: "Images"
+            name: "images"
             widget: "list"
+            max: 3
             fields:
-              - { label:  Title, name: title, widget: string }
-              - { label:  Description, name: description, widget: text }
-              - label:  "Text Alignment"
-                name: "text_align"
-                widget: "select"
-                options: ["left", "center", "right", "justify"]
-                default: "left"
+              - { label:  Image, name: image, widget: image }
+              - { label:  Description, name: description, widget: string }
       - file: "content/pages/contact.json"
         label: "Contact"
         name: "contact-page"
