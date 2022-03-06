@@ -140,8 +140,7 @@ const App = () => {
                                             }}/>
                                         </div>
                                         <Typography variant="subtitle1" className={classes.videoText}>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                                            incididunt ut labore et dolore magna aliqua. Sed tempus urna et pharetra.
+                                            {video_card.description}
                                         </Typography>
                                     </div>
                                 </Zoom>
