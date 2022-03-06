@@ -30,15 +30,10 @@ const useStyles = createUseStyles((theme) => ({
     },
 
     blur: {
-        backdropFilter: 'blur(20px)',
-        backgroundColor: 'rgba(0, 0, 0, 0.2) !important',
+        backgroundColor: 'rgba(0, 0, 0, 0.4) !important',
         borderRadius: '0.75rem',
         width: '90% !important',
         boxShadow: theme.boxShadows.light,
-
-        '@supports (-moz-appearance: none)': {
-            backgroundColor: 'rgba(0, 0, 0, 0.4) !important',
-        }
     },
 
     toolbar: {
