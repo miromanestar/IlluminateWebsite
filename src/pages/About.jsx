@@ -78,7 +78,7 @@ const useStyles = createUseStyles(theme => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: '90px 16px',
+        padding: '90px 24px',
 
         [theme.breakpoints.down('md')]: {
             padding: '45px 16px',
@@ -113,10 +113,6 @@ const useStyles = createUseStyles(theme => ({
         '& .swiper-slide': {
             height: 'min-content'
         },
-
-        '& .swiper-pagination': {
-            bottom: '-30px'
-        }
     },
 
     infoCard: {
@@ -136,7 +132,6 @@ const About = () => {
                     container
                     columns={{ xs: 1, md: 2}}
                     spacing={{ xs: 8, md: 2 }}
-                    columnSpacing={{ md: 16}}
                     className={classes.reverseGrid}
                 >
                     <Grid container item

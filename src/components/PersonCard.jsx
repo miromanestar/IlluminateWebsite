@@ -29,6 +29,7 @@ const useStyles = createUseStyles(theme => ({
         '& div': {
             margin: '-48px 0 0',
             padding: '16px 16px 8px',
+            height: '250px'
         },
 
         '& img': {
@@ -36,6 +37,7 @@ const useStyles = createUseStyles(theme => ({
             width: '100%',
             height: '100%',
             boxShadow: theme.shadows[4],
+            objectFit: 'cover',
         }
     },
 
