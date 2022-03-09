@@ -21,7 +21,15 @@ const useStyles = createUseStyles(theme => ({
 
     card: {
         background: `${theme.colors.darkGradient} !important`,
-        color: 'white !important'
+        color: 'white !important',
+
+        '&:hover': {
+            transform: 'translateX(-15px) scale(1.05)',
+
+            [theme.breakpoints.down('md')] : {
+                transform: 'scale(1.05)',
+            }
+        }
     },
 
     divider: {

@@ -10,14 +10,6 @@ const useStyles = createUseStyles(theme => ({
     root: {
         borderRadius: '0.75rem !important',
         transition: '0.2s ease-in-out !important',
-
-        '&:hover': {
-            transform: 'translateX(-15px) scale(1.05)',
-
-            [theme.breakpoints.down('md')] : {
-                transform: 'scale(1.05)',
-            }
-        }
     },
 
     title: {
