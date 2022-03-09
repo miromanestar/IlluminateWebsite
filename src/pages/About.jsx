@@ -32,12 +32,17 @@ const useStyles = createUseStyles(theme => ({
         flexWrap: 'wrap',
         gap: '16px',
         justifyContent: 'space-evenly',
-        marginBottom: theme.spacing(3),
+        height: 'min-content',
 
         '& img': {
             height: '200px',
             borderRadius: '0.75rem',
             boxShadow: theme.boxShadows.dark,
+            transition: 'all 0.3s ease-in-out',
+
+            '&:hover': {
+                transform: 'scale(1.05)',
+            }
         },
     },
 
@@ -45,29 +50,7 @@ const useStyles = createUseStyles(theme => ({
         width: 'fit-content',
         marginBottom: '10px',
         position: 'relative',
-
-        '&:nth-child(1)': {
-            zIndex: 3,
-
-            '& img': {
-            }
-        },
-
-        '&:nth-child(2)': {
-            zIndex: 2,
-
-            '& img': {
-
-            }
-        },
-
-        '&:nth-child(3)': {
-            zIndex: 1,
-
-            '& img': {
-
-            }
-        }
+        height: 'min-content',
     },
 
     imgDesc: {
@@ -106,17 +89,25 @@ const useStyles = createUseStyles(theme => ({
     swiper: {
         width: '100%',
 
+        '& .swiper-pagination-bullets': {
+            bottom: '-20px'
+        },
+
         '& .swiper-pagination-bullet': {
-            backgroundColor: 'black'
+            backgroundColor: 'white',
         },
 
         '& .swiper-slide': {
-            height: 'min-content'
+            height: '100%',
         },
+
+        '& .swiper-slide-shadow-left,.swiper-slide-shadow-right': {
+            display: 'none',
+        }
     },
 
     infoCard: {
-        maxHeight: '150px',
+        height: '100%',
     },
 }))
 
@@ -132,10 +123,12 @@ const About = () => {
                     container
                     columns={{ xs: 1, md: 2}}
                     spacing={{ xs: 8, md: 2 }}
+                    columnSpacing={{ md: 8}}
                     className={classes.reverseGrid}
                 >
                     <Grid container item
                         xs={1} md={1}
+                        alignContent="space-evenly"
                     >
                         <div className={classes.images}>
                             {
