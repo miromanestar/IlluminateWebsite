@@ -29,7 +29,7 @@ const useStyles = createUseStyles(theme => ({
         '& div': {
             margin: '-48px 0 0',
             padding: '16px 16px 8px',
-            height: '250px'
+            height: '300px',
         },
 
         '& img': {

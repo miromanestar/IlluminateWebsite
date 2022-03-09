@@ -155,6 +155,7 @@ const About = () => {
                                 ))
                             }
                         </div>
+                        
                         <Swiper
                             effect={'flip'}
                             grabCursor={true}
