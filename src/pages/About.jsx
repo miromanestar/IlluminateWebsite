@@ -3,7 +3,7 @@ import { createUseStyles } from 'react-jss'
 import {
     Grid
 } from '@mui/material'
-import Zoom from 'react-reveal/Zoom'
+import { Zoom } from 'react-awesome-reveal'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectFlip, Pagination, Autoplay } from 'swiper'
 import Header from '../components/Header'

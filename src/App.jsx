@@ -1,8 +1,7 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import { createUseStyles } from 'react-jss'
 
-import AnimatedRoutes from './components/AnimatedRoutes'
 import ResponsiveNavbar from './components/ResponsiveNavbar'
 import Footer from './components/Footer'
 
@@ -27,13 +26,13 @@ const App = () => {
         <div className={classes.root}>
             <ResponsiveNavbar />
                 <ScrollTop />
-                <AnimatedRoutes>
+                <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/offers" element={<Offers />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="*" element={<NotFound />} />
-                </AnimatedRoutes>
+                </Routes>
             <Footer />
         </div>
     )

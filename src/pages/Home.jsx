@@ -8,7 +8,7 @@ import {
     useTheme,
     useMediaQuery
 } from '@mui/material'
-import Zoom from 'react-reveal/Zoom'
+import { Zoom } from 'react-awesome-reveal'
 import Main from '../components/Main'
 import Hero from '../components/Hero'
 import Youtube from '../components/Youtube'
