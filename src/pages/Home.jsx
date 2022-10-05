@@ -118,7 +118,7 @@ const App = () => {
                                 {
                                     infoData.map((item, index) =>
                                         <Grid item xs={1} md={1} key={`card_${ index }`}>
-                                            <Zoom delay={!isMobile ? 150 * (index + 1) : 0}>
+                                            <Zoom delay={!isMobile ? 150 * (index + 1) : 0}  triggerOnce={true}>
                                                 <div>
                                                     <Icon color="primary">{item.icon}</Icon>
                                                     <Typography variant="h6">{item.title}</Typography>
@@ -132,7 +132,7 @@ const App = () => {
                             <Grid item
                                 xs={1} md={1}
                             >
-                                <Zoom delay={!isMobile ? 150 * 5 : 0}>
+                                <Zoom delay={!isMobile ? 150 * 5 : 0} triggerOnce={true}>
                                     <div className={classes.cardContainer}>
                                         <div className={classes.videoContainer}>
                                             <Youtube url={videoId} style={{ 
@@ -158,7 +158,7 @@ const App = () => {
                             {
                                 peopleData.map((item, index) => (
                                     <Grid className={classes.personZoom} item xs={1} md={1} key={`person_${ index }`}>
-                                        <Zoom delay={!isMobile ? index % 2 === 0 ? 0 : 150 : 0}>
+                                        <Zoom delay={!isMobile ? index % 2 === 0 ? 0 : 150 : 0} triggerOnce={true}>
                                             <PersonCard person={item} />
                                         </Zoom>
                                     </Grid>

@@ -136,6 +136,7 @@ const About = () => {
                                     <Zoom
                                         key={`about-img-${index}`}
                                         delay={index * 150}
+                                        triggerOnce={true}
                                     >
                                         <div className={classes.imageContainer} >
                                             <img
@@ -182,7 +183,7 @@ const About = () => {
                         columns={{ xs: 1, md: 2 }}
                         xs={1} md={1}
                     >
-                        <Zoom>
+                        <Zoom triggerOnce={true}>
                             <ContentCard
                                 title={DATA.title}
                                 subtitle={DATA.subtitle}
