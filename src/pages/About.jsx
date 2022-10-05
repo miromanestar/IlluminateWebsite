@@ -126,7 +126,7 @@ const About = () => {
                     columnSpacing={{ md: 8}}
                     className={classes.reverseGrid}
                 >
-                    <Grid container item
+                    <Grid item
                         xs={1} md={1}
                         alignContent="space-evenly"
                     >

@@ -81,7 +81,7 @@ const PersonCard = ({ person }) => {
                         <img src={isExternal()} alt={person.name} />
                     </div>
                 </Grid>
-                <Grid item container
+                <Grid item
                     xs={1}
                     sm={1}
                     direction="column"

@@ -129,7 +129,7 @@ const App = () => {
                                     )    
                                 }
                             </Grid>
-                            <Grid container item
+                            <Grid item
                                 xs={1} md={1}
                             >
                                 <Zoom delay={!isMobile ? 150 * 5 : 0}>
