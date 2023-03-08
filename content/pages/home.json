@@ -39,34 +39,40 @@
       "description": "We at Illuminate present unparalled an unparalleled opportunity for students to learn and grow."
     },
     {
-      "name": "Mason Harmon",
+      "name": "Sofia Acevedo",
       "title": "Project Manager",
-      "image": "/images/uploads/mason-min.jpg",
+      "image": "/images/uploads/sofia_acevedo.jpg",
       "description": "Illuminate provides the opportunity to make a difference in the local community and facilitates a positive change."
     },
     {
-      "name": "Kareena Hansen",
-      "title": "Client Relations",
+      "name": "Aaron Merryman",
+      "title": "Assistant Project Manager",
       "description": "Enactus synergizes the strengths of students and the resources of local businesses to positively impact their local community.",
-      "image": "/images/uploads/kareena-min.jpg"
+      "image": "/images/uploads/aaron_merryman.jpg"
     },
     {
-      "name": "Esther Manu",
-      "title": "Client Services",
-      "image": "/images/uploads/esther-min.jpg",
+      "name": "Weston Bredall",
+      "title": "Content Creation",
+      "image": "/images/uploads/weston_bredall.jpg",
       "description": "Illuminate is a helping hand extended to another person in our community. It is all about service for others."
     },
     {
-      "name": "Jomari Villoso",
-      "title": "Event Coordinator",
-      "image": "/images/uploads/jomari-min.jpg",
+      "name": "Matthew Thomas",
+      "title": "Content Creation",
+      "image": "/images/uploads/matthew_thomas.jpg",
       "description": "Illuminate provides the opportunity to impact local and international organizations and to do so with a personal touch."
     },
     {
-      "name": "Gabriella Grundy",
-      "title": "Social Media",
+      "name": "Allison Grundy",
+      "title": "Design Team",
       "description": "The media team at Illuminate is dedicated to bringing our clients vision to life through social media & graphic design.",
-      "image": "/images/uploads/gabriella-min.jpg"
+      "image": "/images/uploads/alison_grundy.jpg"
+    },
+    {
+      "name": "Evan Eslava",
+      "title": "Design Team",
+      "description": "Here at Illuminate we strive to create interesting and eye catching designs for our clients",
+      "image": "/images/uploads/evan_eslava.jpg"
     }
   ]
 }
