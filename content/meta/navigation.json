@@ -16,6 +16,10 @@
     {
       "name": "Contact",
       "url": "/contact"
+    },
+    {
+      "name": "Clients",
+      "url": "/clients"
     }
   ],
   "header_label": "Illuminate",

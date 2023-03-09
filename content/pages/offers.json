@@ -1,36 +1,35 @@
 {
-    "offers": [
-        {
-            "title": "Fundamental",
-            "price": "Free!",
-            "features": [
-                "Social Media Setup",
-                "Minor Graphic Design",
-                "Print Advertisement",
-                "Google Maps Assistance"
-            ]
-        },
-        {
-            "title": "Outreach",
-            "price": "$125",
-            "features": [
-                "All Fundamental Items",
-                "Photography",
-                "Minor Film",
-                "Website Design",
-                "Marketing Assistance"
-            ]
-        },
-        {
-            "title": "Complete",
-            "price": "$250",
-            "features": [
-                "All Outreach Features",
-                "Large Website Design",
-                "Event Planning",
-                "Extensive Marketing",
-                "Business Connections"
-            ]
-        }
-    ]
+  "offers": [
+    {
+      "title": "Fundamental",
+      "price": "Free!",
+      "features": [
+        "Social Media Setup",
+        "Minor Graphic Design",
+        "Print Advertisement",
+        "Google Maps Assistance"
+      ]
+    },
+    {
+      "title": "Outreach",
+      "price": "$125",
+      "features": [
+        "All Fundamental Items",
+        "Photography",
+        "Minor Film",
+        "Marketing Assistance"
+      ]
+    },
+    {
+      "title": "Complete",
+      "price": "$250",
+      "features": [
+        "All Outreach Features",
+        "Large Website Design",
+        "Event Planning",
+        "Extensive Marketing",
+        "Business Connections"
+      ]
+    }
+  ]
 }
