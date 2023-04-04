@@ -63,16 +63,52 @@
       "description": "Illuminate provides the opportunity to impact local and international organizations and to do so with a personal touch."
     },
     {
+      "name": "Sedona Hesler",
+      "title": "Content Creation Team",
+      "image": "/images/uploads/sedona_hesler.jpg",
+      "description": " "
+    },
+    {
       "name": "Allison Grundy",
-      "title": "Design Team",
+      "title": "Social Media Team",
       "description": "The media team at Illuminate is dedicated to bringing our clients vision to life through social media & graphic design.",
       "image": "/images/uploads/alison_grundy.jpg"
+    },
+    {
+      "name": "Illa Lassel",
+      "title": "Social Media Team",
+      "image": "/images/uploads/illa_lassel.jpg",
+      "description": " "
     },
     {
       "name": "Evan Eslava",
       "title": "Design Team",
       "description": "Here at Illuminate we strive to create interesting and eye catching designs for our clients",
       "image": "/images/uploads/evan_eslava.jpg"
+    },
+    {
+      "name": "Sierra Trombley",
+      "title": "Event Planning Team",
+      "image": "/images/uploads/sierra_trombley.jpg",
+      "description": " "
+    },
+    {
+      "name": "Hannah Mortenson",
+      "title": "Event Planning Team",
+      "description": " ",
+      "image": "/images/uploads/hannah_mortenson.jpg"
+    },
+    {
+      "name": "Brandon Reese",
+      "image": "/images/uploads/brandon_reese.jpg",
+      "title": "Logistics Team",
+      "description": " "
+    },
+    {
+      "name": "David Klingbeil",
+      "title": "Logistics Team",
+      "image": "/images/uploads/david_klingbeil.jpg",
+      "description": " "
     }
   ]
 }
