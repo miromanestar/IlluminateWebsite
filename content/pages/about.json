@@ -1,24 +1,33 @@
 {
-    "title": "Our Mission",
-    "subtitle": "Assisting low-revenue organizations by creating and enhancing their digital footprint and offering the fresh perspective of collegiate and professional minds.",
-    "content": "In May 2019, Enactus at Southern Adventist University recognized a need in their local community, and decided to address the need properly. The Collegedale-Chattanooga area was suffering from a devastating tornado and the outbreak of the novel Coronavirus. Small businesses, startups, and nonprofits were all forced to go online whether or not they were ready.\n\nMany businesses struggled with learning how to navigate digital marketing platforms and market to a new type of Customer – the online consumer. This resulted in major revenue losses.\n\nFortunately, several business majors and marketing majors at Southern Adventist University formed a solution called Illuminate Marking. Illuminate acts like a marketing service provider, but is focused on training the owner or sales personnel at the low-revenue organization on how to run their own marketing services. Illuminate is low cost to free billing structure enables every struggling business to receive the assistance they need. Thus, these businesses can be more sustainable, increase their number of Customers, and increase their revenues.",
-    "images": [
-        { "image": "/images/uploads/roman-min.jpg", "description": "Roman Johnson" },
-        { "image": "/images/uploads/header-new-min.jpg", "description": "The Illuminate Marketing Team" },
-        { "image": "/images/uploads/mason-min.jpg", "description": "Mason Harmon" }
-    ],
-    "quotes": [
-        {
-            "name": "Kristi Jensen",
-            "subtitle": "Illuminate Marketing Partner",
-            "content": "Digital marketing is a not a one-size-fits-all system. We strive to create a marketing strategy that reflects the needs and personalities of each company we work with. ",
-            "icon": "account_box"
-        },
-        {
-            "name": "Brandon VanFossen",
-            "subtitle": "CEO of Radiant",
-            "content": "Illuminate Marketing provides valuable services as a nonprofit for startups and small businesses.",
-            "icon": "account_box"
-        }
-    ]
+  "title": "Our Mission",
+  "subtitle": "Assisting low-revenue organizations by creating and enhancing their digital footprint and offering the fresh perspective of collegiate and professional minds.",
+  "content": "In May 2019, Enactus at Southern Adventist University recognized a need in their local community, and decided to address the need properly. The Collegedale-Chattanooga area was suffering from a devastating tornado and the outbreak of the novel Coronavirus. Small businesses, startups, and nonprofits were all forced to go online whether or not they were ready.\n\nMany businesses struggled with learning how to navigate digital marketing platforms and market to a new type of Customer – the online consumer. This resulted in major revenue losses.\n\nFortunately, several business majors and marketing majors at Southern Adventist University formed a solution called Illuminate Marking. Illuminate acts like a marketing service provider, but is focused on training the owner or sales personnel at the low-revenue organization on how to run their own marketing services. Illuminate is low cost to free billing structure enables every struggling business to receive the assistance they need. Thus, these businesses can be more sustainable, increase their number of Customers, and increase their revenues.",
+  "images": [
+    {
+      "image": "/images/uploads/eric_baltodano.jpg",
+      "description": "Eric Baltodano"
+    },
+    {
+      "image": "/images/uploads/header-new-min.jpg",
+      "description": "The Illuminate Marketing Team"
+    },
+    {
+      "image": "/images/uploads/sofia_acevedo.jpg",
+      "description": "Sofia Acevedo"
+    }
+  ],
+  "quotes": [
+    {
+      "name": "Kristi Jensen",
+      "subtitle": "Illuminate Marketing Partner",
+      "content": "Digital marketing is a not a one-size-fits-all system. We strive to create a marketing strategy that reflects the needs and personalities of each company we work with. ",
+      "icon": "account_box"
+    },
+    {
+      "name": "Brandon VanFossen",
+      "subtitle": "CEO of Radiant",
+      "content": "Illuminate Marketing provides valuable services as a nonprofit for startups and small businesses.",
+      "icon": "account_box"
+    }
+  ]
 }
